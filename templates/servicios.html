@@ -136,7 +136,7 @@
 <body>
   <header>
     <div class="brand">
-      <img src="/static/images/pylabs_logo.png" alt="Logo PyAutomateLabs">
+      <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomateLabs">
       <div>
         <h1>PyAutomate Labs</h1>
         <p>🚀 Soluciones reales. Resultados medibles. — Automatización que transforma negocios</p>
@@ -154,27 +154,27 @@
     <h2><i class="fas fa-code"></i> Tecnologías que dominamos</h2>
     <div class="tecnologia-galeria">
       <div class="tecnologia-item" onclick="abrirModal('pythonModal')">
-        <img src="/static/images/python_logo.png" alt="Python">
+        <img src="{{ url_for('static', filename='images/python_logo.png') }}" alt="Python">
         <p>Python</p>
       </div>
       <div class="tecnologia-item" onclick="abrirModal('appsModal')">
-        <img src="/static/images/app_scrip_logo_2.png" alt="Apps Script">
+        <img src="{{ url_for('static', filename='images/app_scrip_logo_2.png') }}" alt="Apps Script">
         <p>Apps Script</p>
       </div>
       <div class="tecnologia-item" onclick="abrirModal('javaModal')">
-        <img src="/static/images/java_logo.png" alt="Java">
+        <img src="{{ url_for('static', filename='images/java_logo.png') }}" alt="Java">
         <p>Java</p>
       </div>
       <div class="tecnologia-item" onclick="abrirModal('sqlModal')">
-        <img src="/static/images/sql_logo.png" alt="SQL">
+        <img src="{{ url_for('static', filename='images/sql_logo.png') }}" alt="SQL">
         <p>SQL</p>
       </div>
       <div class="tecnologia-item" onclick="abrirModal('bqModal')">
-        <img src="/static/images/bigquery_icon_2.png" alt="BigQuery">
+        <img src="{{ url_for('static', filename='images/bigquery_icon_2.png') }}" alt="BigQuery">
         <p>BigQuery</p>
       </div>
       <div class="tecnologia-item" onclick="abrirModal('lookerModal')">
-        <img src="/static/images/studio_logo.png" alt="Looker Studio">
+        <img src="{{ url_for('static', filename='images/studio_logo.png') }}" alt="Looker Studio">
         <p>Looker</p>
       </div>
     </div>
