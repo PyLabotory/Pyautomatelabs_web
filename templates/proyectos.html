@@ -115,7 +115,7 @@
 <body>
   <header>
     <div class="brand">
-      <img src="/static/images/pylabs_logo.png" alt="Logo PyAutomateLabs">
+      <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomateLabs">
       <div>
         <h1>PyAutomate Labs</h1>
         <p>📊 Casos de Éxito — Resultados reales, soluciones inteligentes</p>
@@ -176,4 +176,6 @@
   </footer>
 </body>
 </html>
+
+
 
