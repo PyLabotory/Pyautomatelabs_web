@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casos de Éxito – PyAutomate Labs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1117;
+      color: #eaeaea;
+    }
+    header {
+      background: linear-gradient(to right, #003973, #00d2ff);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .brand img {
+      height: 70px;
+      border-radius: 10px;
+    }
+    .brand h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .brand p {
+      margin: 0.3rem 0 0;
+      font-size: 1.2rem;
+      color: #c6ebff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1d29;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: #eaeaea;
+      text-decoration: none;
+      margin: 0 1.8rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00d2ff;
+    }
+    .content {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h2, h3 {
+      color: #00d2ff;
+      margin-top: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 2rem;
+    }
+    .tarjeta {
+      border: 2px solid #00d2ff;
+      padding: 1rem;
+      border-radius: 10px;
+      background-color: #1a1d29;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+    .tarjeta h3 {
+      color: #00d2ff;
+      margin-top: 0;
+    }
+    .tarjeta p {
+      font-size: 1rem;
+    }
+    .tarjeta a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #00d2ff;
+      color: #0f1117;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .tarjeta a:hover {
+      background-color: #00a2cc;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #0f1117;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="/static/images/pylabs_logo.png" alt="Logo PyAutomateLabs">
+      <div>
+        <h1>PyAutomate Labs</h1>
+        <p>📊 Casos de Éxito — Resultados reales, soluciones inteligentes</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/servicios">Servicios</a>
+    <a href="/proyectos">Casos de Éxito</a>
+    <a href="/contacto">Contacto</a>
+  </nav>
+
+  <section class="content">
+    <h2><i class="fas fa-briefcase"></i> Proyectos realizados</h2>
+    <p>Estos son algunos de los proyectos que hemos desarrollado, demostrando cómo la automatización y el análisis de datos generan resultados concretos.</p>
+
+    <div class="tarjetas">
+      <div class="tarjeta">
+        <h3><i class="fas fa-database"></i> ETL automatizada + BigQuery</h3>
+        <p><strong>Tecnologías:</strong> Python, BigQuery, Power BI</p>
+        <p>Automatizamos el flujo de datos desde archivos crudos hasta paneles en tiempo real, con filtros, métricas y actualizaciones programadas.</p>
+        <a href="#">Ver demo</a>
+      </div>
+      <div class="tarjeta">
+        <h3><i class="fas fa-robot"></i> Bot de reportes por correo</h3>
+        <p><strong>Tecnologías:</strong> Outlook + Python</p>
+        <p>Enviamos diariamente tablas con métricas clave por proveedor directamente al correo corporativo, con formato profesional y firma.</p>
+        <a href="#">Ver demo</a>
+      </div>
+      <div class="tarjeta">
+        <h3><i class="fas fa-file-alt"></i> Formularios conectados a Google Sheets y BigQuery</h3>
+        <p><strong>Tecnologías:</strong> Apps Script, Google Forms, BigQuery</p>
+        <p>Recolectamos datos de formularios para alimentar dashboards automáticos sin intervención manual.</p>
+        <a href="#">Ver demo</a>
+      </div>
+	<div class="tarjeta">
+  	<h3><i class="fas fa-desktop"></i> Aplicaciones de escritorio con Python</h3>
+  	<p><strong>Tecnologías:</strong> Python, Tkinter</p>
+  	<p>Desarrollamos herramientas visuales para uso interno como formularios, gestores de datos, control de inventarios o sistemas de recepción personalizados.</p>
+  	<a href="#">Ver demo</a>
+      </div>
+	<div class="tarjeta">
+  	<h3><i class="fas fa-chart-line"></i> Dashboards ejecutivos y operacionales</h3>
+  	<p><strong>Tecnologías:</strong> Power BI, Looker Studio, BigQuery</p>
+  	<p>Diseñamos paneles interactivos que permiten visualizar KPIs en tiempo real, segmentar por filtros y tomar decisiones informadas desde cualquier dispositivo.</p>
+  	<a href="#">Ver demo</a>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <footer>
+    PyAutomate Labs © 2025 — Automate the Smart Way
+  </footer>
+</body>
+</html>
+

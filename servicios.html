@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios – PyAutomate Labs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1117;
+      color: #eaeaea;
+    }
+    header {
+      background: linear-gradient(to right, #003973, #00d2ff);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .brand img {
+      height: 70px;
+      border-radius: 10px;
+    }
+    .brand h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .brand p {
+      margin: 0.3rem 0 0;
+      font-size: 1.2rem;
+      color: #c6ebff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1d29;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: #eaeaea;
+      text-decoration: none;
+      margin: 0 1.8rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00d2ff;
+    }
+    .content {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h2, h3 {
+      color: #00d2ff;
+      margin-top: 2rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .divider {
+      margin: 3rem auto;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #00d2ff, transparent);
+      width: 80%;
+    }
+    .tecnologia-galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .tecnologia-item {
+      background-color: #1c1f2c;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 180px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+    .tecnologia-item img {
+      max-width: 100%;
+      max-height: 80px;
+      object-fit: contain;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: #1f2533;
+      margin: 10% auto;
+      padding: 2rem;
+      border: 1px solid #00d2ff;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      color: #eaeaea;
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #00d2ff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #0f1117;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="/static/images/pylabs_logo.png" alt="Logo PyAutomateLabs">
+      <div>
+        <h1>PyAutomate Labs</h1>
+        <p>🚀 Soluciones reales. Resultados medibles. — Automatización que transforma negocios</p>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/servicios">Servicios</a>
+    <a href="/proyectos">Casos de Éxito</a>
+    <a href="/contacto">Contacto</a>
+  </nav>
+  <section class="content">
+    <p><strong>Trabajamos principalmente con:</strong> Python, Java, Apps Script, Power Automate, SQL, BigQuery y más.</p>
+    <h2><i class="fas fa-code"></i> Tecnologías que dominamos</h2>
+    <div class="tecnologia-galeria">
+      <div class="tecnologia-item" onclick="abrirModal('pythonModal')">
+        <img src="/static/images/python_logo.png" alt="Python">
+        <p>Python</p>
+      </div>
+      <div class="tecnologia-item" onclick="abrirModal('appsModal')">
+        <img src="/static/images/app_scrip_logo_2.png" alt="Apps Script">
+        <p>Apps Script</p>
+      </div>
+      <div class="tecnologia-item" onclick="abrirModal('javaModal')">
+        <img src="/static/images/java_logo.png" alt="Java">
+        <p>Java</p>
+      </div>
+      <div class="tecnologia-item" onclick="abrirModal('sqlModal')">
+        <img src="/static/images/sql_logo.png" alt="SQL">
+        <p>SQL</p>
+      </div>
+      <div class="tecnologia-item" onclick="abrirModal('bqModal')">
+        <img src="/static/images/bigquery_icon_2.png" alt="BigQuery">
+        <p>BigQuery</p>
+      </div>
+      <div class="tecnologia-item" onclick="abrirModal('lookerModal')">
+        <img src="/static/images/studio_logo.png" alt="Looker Studio">
+        <p>Looker</p>
+      </div>
+    </div>
+
+    <!-- MODALES -->
+    <div class="modal" id="pythonModal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal('pythonModal')">&times;</span>
+        <h3>Python</h3>
+        <p><strong>Lenguaje de programación versátil y potente</strong> que permite automatizar tareas, construir aplicaciones y analizar datos con rapidez.</p>
+        <ul>
+          <li>ETLs desde archivos Excel, APIs, bases de datos</li>
+          <li>Aplicaciones de escritorio con Tkinter o PyQt</li>
+          <li>Dashboards automáticos, bots y procesamiento masivo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal" id="appsModal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal('appsModal')">&times;</span>
+        <h3>Google Apps Script</h3>
+        <p><strong>Lenguaje de scripting basado en JavaScript</strong> que permite automatizar tareas en el ecosistema Google (Sheets, Gmail, Forms, Drive).</p>
+        <ul>
+          <li>Notificaciones automáticas por correo</li>
+          <li>Generación de reportes en PDF</li>
+          <li>Conexión entre Forms y Google Sheets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal" id="javaModal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal('javaModal')">&times;</span>
+        <h3>Java</h3>
+        <p><strong>Lenguaje de programación robusto y multiplataforma</strong>, ideal para aplicaciones empresariales, móviles (Android) y sistemas escalables.</p>
+        <ul>
+          <li>Aplicaciones móviles Android</li>
+          <li>Sistemas backend de alto rendimiento</li>
+          <li>Integraciones con servicios empresariales</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal" id="sqlModal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal('sqlModal')">&times;</span>
+        <h3>SQL</h3>
+        <p><strong>Lenguaje de consulta estructurado</strong> para gestionar, extraer y transformar datos en bases de datos relacionales como Oracle, MySQL o BigQuery.</p>
+        <ul>
+          <li>Diseño y modelado de bases de datos</li>
+          <li>Consultas complejas para reportes BI</li>
+          <li>Integración con Python y dashboards</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal" id="bqModal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal('bqModal')">&times;</span>
+        <h3>BigQuery</h3>
+        <p><strong>Plataforma de análisis de datos en la nube de Google</strong>, optimizada para ejecutar consultas SQL sobre grandes volúmenes de información.</p>
+        <ul>
+          <li>Procesamiento de millones de registros en segundos</li>
+          <li>ETLs a escala con bajo mantenimiento</li>
+          <li>Conexión directa con Looker Studio y otras herramientas BI</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal" id="lookerModal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal('lookerModal')">&times;</span>
+        <h3>Looker Studio</h3>
+        <p><strong>Herramienta de visualización de datos de Google</strong> que permite crear dashboards interactivos y reportes profesionales en tiempo real.</p>
+        <ul>
+          <li>Reportes dinámicos para KPIs operacionales</li>
+          <li>Conexiones con BigQuery, Google Sheets y APIs</li>
+          <li>Exportación de reportes automatizados</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function abrirModal(id) {
+        document.getElementById(id).style.display = "block";
+      }
+      function cerrarModal(id) {
+        document.getElementById(id).style.display = "none";
+      }
+      window.onclick = function(event) {
+        const modales = document.querySelectorAll(".modal");
+        modales.forEach(modal => {
+          if (event.target == modal) modal.style.display = "none";
+        });
+      }
+    </script>
+
+    <div class="divider"></div>
+    <h2><i class="fas fa-cogs"></i> Áreas de Servicio</h2>
+
+    <div class="servicio">
+      <h3><i class="fab fa-python"></i> 1. Automatización con Python y Visibilidad de Datos</h3>
+      <ul>
+        <li>Desarrollo de ETLs desde Excel, Google Sheets, APIs, Oracle, SQL, BigQuery.</li>
+        <li>Aplicaciones internas con Tkinter, PyQt o scripts automatizados.</li>
+        <li>Envío automatizado de correos, carga y transformación de archivos.</li>
+        <li>Dashboards dinámicos en Power BI, Looker Studio o Tableau.</li>
+        <li>Integraciones y RPA para tareas repetitivas o de alto volumen.</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="servicio">
+      <h3><i class="fas fa-plug"></i> 2. Automatización con Herramientas Low Code / No Code</h3>
+      <ul>
+        <li>Automatización con Google Apps Script, Power Automate, Zapier.</li>
+        <li>Digitalización de formularios con Google Forms.</li>
+        <li>Integración de datos con Sheets, Drive, Outlook, Forms y más.</li>
+        <li>Alertas, notificaciones automáticas, flujo de trabajo inteligente.</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="servicio">
+      <h3><i class="fas fa-laptop-code"></i> 3. Soluciones Personalizadas y Proyectos Especiales</h3>
+      <ul>
+        <li>Desarrollo de scripts a medida para tareas personales o laborales.</li>
+        <li>Automatización de reportes, cálculos, conversiones de archivos.</li>
+        <li>Creación de herramientas ligeras: extractores, convertidores, formularios automatizados.</li>
+        <li>Asistencia en proyectos de programación (Python, SQL, HTML, Apps Script, etc.).</li>
+        <li>Visualización de datos para presentaciones, informes o gestión personal.</li>
+        <li>Automatización de simulaciones, cálculos, alertas o flujos repetitivos.</li>
+        <li>Apoyo en trabajos académicos, tesis o entregas técnicas cuando se requiere.</li>
+      </ul>
+    </div>
+
+    <p><strong>⭐ Agenda tu diagnóstico sin costo.</strong> Cuéntanos tus procesos y nosotros nos encargamos del resto. Te ayudamos a <strong>crecer con tecnología real y simple</strong>.</p>
+  </section>
+
+  <footer>
+    PyAutomate Labs © 2025 — Automate the Smart Way
+  </footer>
+</body>
+</html>

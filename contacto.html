@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto – PyAutomate Labs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1117;
+      color: #eaeaea;
+    }
+    header {
+      background: linear-gradient(to right, #003973, #00d2ff);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .brand img {
+      height: 70px;
+      border-radius: 10px;
+    }
+    .brand h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .brand p {
+      margin: 0.3rem 0 0;
+      font-size: 1.2rem;
+      color: #c6ebff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1d29;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: #eaeaea;
+      text-decoration: none;
+      margin: 0 1.8rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00d2ff;
+    }
+    .content {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h2 {
+      color: #00d2ff;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    label {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+      width: 100%;
+    }
+    button {
+      background-color: #00d2ff;
+      color: #0f1117;
+      font-weight: bold;
+      border: none;
+      padding: 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #0f1117;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="static/images/pylabs_logo.png" alt="Logo PyAutomateLabs">
+      <div>
+        <h1>PyAutomate Labs</h1>
+        <p>📞 Hablemos de tu proyecto — Respuesta en 24h</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/servicios">Servicios</a>
+    <a href="/proyectos">Casos de Éxito</a>
+    <a href="/contacto">Contacto</a>
+  </nav>
+
+  <section class="content">
+    <h2><i class="fas fa-envelope"></i> Contáctanos</h2>
+    <p><i class="fas fa-paper-plane"></i> <strong>Email:</strong> contacto@pyautomate.cl</p>
+    <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> +56 9 1234 5678</p>
+    <p><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> Santiago, Chile (Atención LATAM)</p>
+    <p><i class="fas fa-user-cog"></i> <strong>¿Tienes un flujo que automatizar?</strong> Nuestro equipo está listo para darte una solución a medida.</p>
+    <p><i class="fas fa-clock"></i> <strong>Horario de atención:</strong> Lunes a Viernes, 09:00 – 18:00 hrs.</p>
+
+    <form action="https://formsubmit.co/soporte@pyautomatelabscl.com" method="POST" style="margin-top: 3rem; display: flex; flex-direction: column; gap: 1.5rem; background-color: #1a1d29; padding: 2rem; border-radius: 10px;">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.pyautomatelabs.cl/agradecimiento">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="📬 Nuevo contacto desde PyAutomate Labs">
+      <input type="hidden" name="_autoresponse" value="¡Gracias por contactarnos! Hemos recibido tu mensaje y te responderemos pronto.">
+
+      <h2><i class="fas fa-paper-plane"></i> Envíanos tu mensaje</h2>
+
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="telefono">Teléfono de contacto:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    PyAutomate Labs © 2025 — Automate the Smart Way
+  </footer>
+</body>
+</html>
+
+
+
+

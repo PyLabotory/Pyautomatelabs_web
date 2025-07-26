@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio – PyAutomate Labs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f1117;
+      color: #eaeaea;
+    }
+
+    header {
+      background: linear-gradient(to right, #003973, #00d2ff);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .brand img {
+      height: 70px;
+      border-radius: 10px;
+    }
+
+    .brand h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .brand p {
+      margin: 0.3rem 0 0;
+      font-size: 1.2rem;
+      color: #c6ebff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1d29;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: #eaeaea;
+      text-decoration: none;
+      margin: 0 1.8rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d2ff;
+    }
+
+    section.empresa, section.mision {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    section.empresa {
+      background-color: #121520;
+    }
+
+    section.mision {
+      background-color: #10131c;
+    }
+
+    section.empresa h2,
+    section.mision h2 {
+      font-size: 2.6rem;
+      color: #00d2ff;
+      margin-bottom: 1rem;
+    }
+
+    section.empresa p,
+    section.mision p {
+      max-width: 850px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #d0d0d0;
+    }
+
+    .hero {
+      background-color: #10131c;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #00d2ff;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #d0d0d0;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+    }
+
+    .buttons a {
+      background-color: #00d2ff;
+      color: #0f1117;
+      padding: 0.9rem 2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 1rem;
+      font-size: 1rem;
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #0090cc;
+      box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4);
+    }
+
+    .features {
+      padding: 4rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+      background-color: #121520;
+    }
+
+    .card {
+      background-color: #1c1f2c;
+      padding: 2rem;
+      border-radius: 14px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.25);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card i {
+      font-size: 3rem;
+      color: #00d2ff;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      color: #00d2ff;
+      margin-bottom: 0.7rem;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      font-size: 1.05rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #0f1117;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="/static/images/pylabs_logo.png" alt="Logo PyAutomateLabs">
+      <div>
+        <h1>PyAutomate Labs</h1>
+        <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/servicios">Servicios</a>
+    <a href="/proyectos">Casos de Éxito</a>
+    <a href="/contacto">Contacto</a>
+  </nav>
+
+  <section class="empresa">
+    <h2>¿Quiénes Somos?</h2>
+    <p>
+      <strong>PyAutomate Labs</strong> es una empresa tecnológica especializada en automatización de procesos, integración de datos
+      y desarrollo de soluciones digitales a medida. Nacimos con un propósito claro: <strong>llevar las herramientas de automatización
+      de clase mundial al alcance de las pequeñas y medianas empresas</strong>, ayudándolas a crecer, profesionalizar su operación y ahorrar tiempo valioso.
+      <br><br>
+      Sabemos que en una PYME no hay tiempo para perder, ni recursos para desperdiciar. Por eso diseñamos soluciones ágiles, enfocadas en generar impacto real, medible y rápido.
+      <br><br>
+      Nuestro enfoque es 100% consultivo: <strong>analizamos, diseñamos y automatizamos</strong> flujos de trabajo para que tu equipo pueda enfocarse en lo que realmente importa: hacer crecer tu negocio.
+    </p>
+  </section>
+
+  <section class="mision">
+    <h2>Nuestra Misión</h2>
+    <p>
+      Democratizar el acceso a la automatización y la inteligencia operativa, empoderando a las pequeñas y medianas empresas con soluciones simples,
+      escalables y eficientes, que les permitan competir de igual a igual con grandes organizaciones.
+    </p>
+  </section>
+
+  <section class="hero">
+    <h2>Transformamos procesos en oportunidades</h2>
+    <p>
+      Somos especialistas en automatización inteligente y soluciones de integración empresarial.
+      Reducimos tareas manuales, conectamos tus sistemas y generamos visibilidad en tiempo real para decisiones más ágiles.
+    </p>
+    <div class="buttons">
+      <a href="/servicios"><i class="fas fa-cogs"></i> Ver Servicios</a>
+      <a href="/contacto"><i class="fas fa-paper-plane"></i> Cotizar Ahora</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <i class="fas fa-robot"></i>
+      <h3>Automatización Inteligente</h3>
+      <p>Eliminamos tareas repetitivas con bots que ejecutan flujos y rutinas con precisión suiza.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-database"></i>
+      <h3>Procesamiento de Datos</h3>
+      <p>Conectamos tus fuentes de datos y las estructuramos para dashboards o análisis avanzados.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Visualización de Alto Impacto</h3>
+      <p>Power BI y Looker Studio para que tu operación se entienda con un solo vistazo.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-handshake"></i>
+      <h3>Enfoque Consultivo</h3>
+      <p>No vendemos scripts. Creamos soluciones alineadas a tus objetivos estratégicos.</p>
+    </div>
+  </section>
+
+  <footer>
+    PyAutomate Labs © 2025 — Automate the Smart Way
+  </footer>
+
+</body>
+</html>
