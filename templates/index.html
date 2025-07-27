@@ -189,6 +189,63 @@
       color: #888;
       font-size: 0.9rem;
     }
+
+    /* 🌐 Responsive Design para móviles */
+@media (max-width: 768px) {
+  .brand {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .brand h1 {
+    font-size: 2rem;
+  }
+
+  .brand p {
+    font-size: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  section.empresa,
+  section.mision,
+  section.hero,
+  .features {
+    padding: 2rem 1rem;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .buttons a {
+    width: 90%;
+    text-align: center;
+  }
+}
+
   </style>
 </head>
 <body>
