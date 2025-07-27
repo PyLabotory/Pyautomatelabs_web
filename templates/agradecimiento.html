@@ -17,17 +17,21 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
+      padding: 1rem;
     }
+
     h1 {
       font-size: 2.5rem;
       color: #00d2ff;
       margin-bottom: 1rem;
     }
+
     p {
       font-size: 1.2rem;
       color: #c6ebff;
       margin-bottom: 2rem;
     }
+
     a {
       color: #0f1117;
       background-color: #00d2ff;
@@ -37,69 +41,26 @@
       font-weight: bold;
       transition: background 0.3s;
     }
+
     a:hover {
       background-color: #00a6cc;
     }
-    /* 🌐 Estilos responsive para móviles */
-@media (max-width: 768px) {
-  .brand {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .brand h1 {
-    font-size: 2rem;
-  }
+    /* 🌐 Responsive solo para esta página */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
 
-  .brand p {
-    font-size: 1rem;
-  }
+      p {
+        font-size: 1rem;
+      }
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0;
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
-
-  .content {
-    padding: 2rem 1rem;
-  }
-
-  .tecnologia-galeria {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tecnologia-item {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .modal-content {
-    margin: 15% auto;
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .servicio {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  h2, h3 {
-    font-size: 1.5rem;
-  }
-
-  ul {
-    padding-left: 1rem;
-  }
-}
-
+      a {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -108,3 +69,4 @@
   <a href="/">Volver al inicio</a>
 </body>
 </html>
+
