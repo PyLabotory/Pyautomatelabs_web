@@ -7,8 +7,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 *{box-sizing:border-box;}
+/* === Mantener footer fijo al fondo === */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1; /* empuja el footer hacia abajo */
+}
 body{
-  margin:0;
   font-family:'Segoe UI',sans-serif;
   background-color:#ffffff;
   color:#333;
@@ -178,106 +187,94 @@ footer{
   <a href="/proyectos">Proyectos</a>
   <a href="/contacto">Contacto</a>
 </nav>
-<section class="empresa">
-  <h2>¿Quiénes Somos?</h2>
-  <p><strong>PyAutomate Labs</strong> es una empresa tecnológica especializada en automatización de procesos, integración de datos y desarrollo de soluciones digitales a medida. Nacimos con un propósito claro: <strong>llevar las herramientas de automatización de clase mundial al alcance de las pequeñas y medianas empresas</strong>, ayudándolas a crecer, profesionalizar su operación y ahorrar tiempo valioso.</p>
-</section>
-<section class="mision">
-  <h2>Nuestra Misión</h2>
-  <p>Democratizar el acceso a la automatización y la inteligencia operativa, empoderando a las pequeñas y medianas empresas con soluciones simples, escalables y eficientes, que les permitan competir de igual a igual con grandes organizaciones.</p>
-</section>
-<section class="hero">
-  <h2>Transformamos procesos en oportunidades</h2>
-  <p>Somos especialistas en automatización inteligente y soluciones de integración empresarial. Reducimos tareas manuales, conectamos tus sistemas y generamos visibilidad en tiempo real para decisiones más ágiles.</p>
-  <div class="buttons">
-    <a href="/servicios"><i class="fas fa-cogs"></i> Ver Servicios</a>
-    <a href="/contacto"><i class="fas fa-paper-plane"></i> Cotizar Ahora</a>
-  </div>
-</section>
-<section class="features">
-  <div class="card">
-    <i class="fas fa-robot"></i>
-    <h3>Automatización Inteligente</h3>
-    <p>Eliminamos tareas repetitivas con bots que ejecutan flujos y rutinas con precisión.</p>
-  </div>
-  <div class="card">
-    <i class="fas fa-database"></i>
-    <h3>Procesamiento de Datos</h3>
-    <p>Conectamos tus fuentes de datos y las estructuramos para dashboards o análisis avanzados.</p>
-  </div>
-  <div class="card">
-    <i class="fas fa-chart-line"></i>
-    <h3>Visualización de Alto Impacto</h3>
-    <p>Power BI y Looker Studio para que tu operación se entienda con un solo vistazo.</p>
-  </div>
-  <div class="card">
-    <i class="fas fa-handshake"></i>
-    <h3>Enfoque Consultivo</h3>
-    <p>No vendemos scripts. Creamos soluciones alineadas a tus objetivos estratégicos.</p>
-  </div>
-</section>
 
-<!-- Nueva sección: Cómo Funciona -->
-<section class="como-funciona">
-  <h2>¿Cómo Funciona?</h2>
-  <div class="proceso">
-    <div class="paso">
-      <i class="fas fa-search"></i>
-      <h3>Paso 1: Diagnóstico</h3>
-      <p>Analizamos tus procesos para detectar oportunidades de automatización.</p>
+<main>
+  <section class="empresa">
+    <h2>¿Quiénes Somos?</h2>
+    <p><strong>PyAutomate Labs</strong> es una empresa tecnológica especializada en automatización de procesos, integración de datos y desarrollo de soluciones digitales a medida. Nacimos con un propósito claro: <strong>llevar las herramientas de automatización de clase mundial al alcance de las pequeñas y medianas empresas</strong>, ayudándolas a crecer, profesionalizar su operación y ahorrar tiempo valioso.</p>
+  </section>
+  <section class="mision">
+    <h2>Nuestra Misión</h2>
+    <p>Democratizar el acceso a la automatización y la inteligencia operativa, empoderando a las pequeñas y medianas empresas con soluciones simples, escalables y eficientes, que les permitan competir de igual a igual con grandes organizaciones.</p>
+  </section>
+  <section class="hero">
+    <h2>Transformamos procesos en oportunidades</h2>
+    <p>Somos especialistas en automatización inteligente y soluciones de integración empresarial. Reducimos tareas manuales, conectamos tus sistemas y generamos visibilidad en tiempo real para decisiones más ágiles.</p>
+    <div class="buttons">
+      <a href="/servicios"><i class="fas fa-cogs"></i> Ver Servicios</a>
+      <a href="/contacto"><i class="fas fa-paper-plane"></i> Cotizar Ahora</a>
     </div>
-    <div class="paso">
-      <i class="fas fa-lightbulb"></i>
-      <h3>Paso 2: Diseño</h3>
-      <p>Creamos una estrategia adaptada a tus objetivos.</p>
+  </section>
+  <section class="features">
+    <div class="card">
+      <i class="fas fa-robot"></i>
+      <h3>Automatización Inteligente</h3>
+      <p>Eliminamos tareas repetitivas con bots que ejecutan flujos y rutinas con precisión.</p>
     </div>
-    <div class="paso">
-      <i class="fas fa-cogs"></i>
-      <h3>Paso 3: Implementación</h3>
-      <p>Configuramos soluciones listas para generar resultados inmediatos.</p>
+    <div class="card">
+      <i class="fas fa-database"></i>
+      <h3>Procesamiento de Datos</h3>
+      <p>Conectamos tus fuentes de datos y las estructuramos para dashboards o análisis avanzados.</p>
     </div>
-    <div class="paso">
-      <i class="fas fa-sync-alt"></i>
-      <h3>Paso 4: Optimización</h3>
-      <p>Mejoramos continuamente para maximizar tu rendimiento.</p>
+    <div class="card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Visualización de Alto Impacto</h3>
+      <p>Power BI y Looker Studio para que tu operación se entienda con un solo vistazo.</p>
     </div>
-  </div>
-</section>
+    <div class="card">
+      <i class="fas fa-handshake"></i>
+      <h3>Enfoque Consultivo</h3>
+      <p>No vendemos scripts. Creamos soluciones alineadas a tus objetivos estratégicos.</p>
+    </div>
+  </section>
 
- <!-- Footer Profesional -->
-  <footer>
-    <div class="footer-contenido">
-      <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
-      <div>
-        <p><strong>PyAutomate Labs</strong></p>
-        <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
-        <div class="footer-info">
-          <p><i class="fas fa-phone"></i> +56 9 3087 5110</p>
-          <p><i class="fas fa-envelope"></i> soporte@pyautomatelabscl.com</p>
-          <p><i class="fas fa-globe"></i> www.pyautomatelabs.cl</p>
-        </div>
+  <!-- Nueva sección: Cómo Funciona -->
+  <section class="como-funciona">
+    <h2>¿Cómo Funciona?</h2>
+    <div class="proceso">
+      <div class="paso">
+        <i class="fas fa-search"></i>
+        <h3>Paso 1: Diagnóstico</h3>
+        <p>Analizamos tus procesos para detectar oportunidades de automatización.</p>
+      </div>
+      <div class="paso">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Paso 2: Diseño</h3>
+        <p>Creamos una estrategia adaptada a tus objetivos.</p>
+      </div>
+      <div class="paso">
+        <i class="fas fa-cogs"></i>
+        <h3>Paso 3: Implementación</h3>
+        <p>Configuramos soluciones listas para generar resultados inmediatos.</p>
+      </div>
+      <div class="paso">
+        <i class="fas fa-sync-alt"></i>
+        <h3>Paso 4: Optimización</h3>
+        <p>Mejoramos continuamente para maximizar tu rendimiento.</p>
       </div>
     </div>
-    <div class="footer-copy">
-      © 2025 PyAutomate Labs — Dominio reservado. Todos los derechos reservados.
-    </div>
-  </footer>
+  </section>
+</main>
 
-  <a href="https://wa.me/+56930875110" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<!-- Footer Profesional -->
+<footer>
+  <div class="footer-contenido">
+    <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
+    <div>
+      <p><strong>PyAutomate Labs</strong></p>
+      <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
+      <div class="footer-info">
+        <p><i class="fas fa-phone"></i> +56 9 3087 5110</p>
+        <p><i class="fas fa-envelope"></i> soporte@pyautomatelabscl.com</p>
+        <p><i class="fas fa-globe"></i> www.pyautomatelabs.cl</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copy">
+    © 2025 PyAutomate Labs — Dominio reservado. Todos los derechos reservados.
+  </div>
+</footer>
+
+<a href="https://wa.me/+56930875110" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
