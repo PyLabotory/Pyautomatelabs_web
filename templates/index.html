@@ -6,9 +6,7 @@
   <title>Inicio – PyAutomate Labs</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -62,7 +60,6 @@
       margin: 0 1.8rem;
       font-weight: bold;
       font-size: 1.1rem;
-      position: relative;
       transition: color 0.3s;
     }
 
@@ -190,62 +187,24 @@
       font-size: 0.9rem;
     }
 
-    /* 🌐 Responsive Design para móviles */
-@media (max-width: 768px) {
-  .brand {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .brand h1 {
-    font-size: 2rem;
-  }
-
-  .brand p {
-    font-size: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0;
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
-
-  section.empresa,
-  section.mision,
-  section.hero,
-  .features {
-    padding: 2rem 1rem;
-  }
-
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    max-width: 350px;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .buttons a {
-    width: 90%;
-    text-align: center;
-  }
-}
-
+    /* Botón flotante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      padding: 16px;
+      font-size: 26px;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: background-color .3s, transform .2s;
+    }
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -273,10 +232,6 @@
       <strong>PyAutomate Labs</strong> es una empresa tecnológica especializada en automatización de procesos, integración de datos
       y desarrollo de soluciones digitales a medida. Nacimos con un propósito claro: <strong>llevar las herramientas de automatización
       de clase mundial al alcance de las pequeñas y medianas empresas</strong>, ayudándolas a crecer, profesionalizar su operación y ahorrar tiempo valioso.
-      <br><br>
-      Sabemos que en una PYME no hay tiempo para perder, ni recursos para desperdiciar. Por eso diseñamos soluciones ágiles, enfocadas en generar impacto real, medible y rápido.
-      <br><br>
-      Nuestro enfoque es 100% consultivo: <strong>analizamos, diseñamos y automatizamos</strong> flujos de trabajo para que tu equipo pueda enfocarse en lo que realmente importa: hacer crecer tu negocio.
     </p>
   </section>
 
@@ -304,7 +259,7 @@
     <div class="card">
       <i class="fas fa-robot"></i>
       <h3>Automatización Inteligente</h3>
-      <p>Eliminamos tareas repetitivas con bots que ejecutan flujos y rutinas con precisión suiza.</p>
+      <p>Eliminamos tareas repetitivas con bots que ejecutan flujos y rutinas con precisión.</p>
     </div>
     <div class="card">
       <i class="fas fa-database"></i>
@@ -326,6 +281,11 @@
   <footer>
     PyAutomate Labs © 2025 — Automate the Smart Way
   </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/+56912345678" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
