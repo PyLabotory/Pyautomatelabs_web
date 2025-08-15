@@ -6,158 +6,88 @@
   <title>Contacto – PyAutomate Labs</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f1117;
-      color: #eaeaea;
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:'Segoe UI',sans-serif;
+      background-color:#ffffff;
+      color:#333;
     }
-    header {
-      background: linear-gradient(to right, #003973, #00d2ff);
-      padding: 3rem 2rem 2rem;
-      text-align: center;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    header{
+      background:linear-gradient(to right,#003973,#00d2ff);
+      padding:3rem 2rem 2rem;
+      text-align:center;
+      color:white;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+    .brand{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1.5rem;}
+    .brand img{height:70px;border-radius:10px;}
+    .brand h1{font-size:3rem;margin:0;}
+    .brand p{margin:0.3rem 0 0;font-size:1.2rem;color:#c6ebff;}
+    nav{display:flex;justify-content:center;background-color:#f2f2f2;padding:1rem 0;}
+    nav a{color:#333;text-decoration:none;margin:0 1.8rem;font-weight:bold;font-size:1.1rem;transition:color 0.3s;}
+    nav a:hover{color:#00d2ff;}
+    .content{padding:3rem 2rem;max-width:1100px;margin:0 auto;}
+    h2{color:#00d2ff;}
+    p{font-size:1.1rem;margin-bottom:1rem;}
+    label{font-weight:bold;font-size:1rem;}
+    input,textarea{
+      padding:0.8rem;
+      border-radius:5px;
+      border:1px solid #e0e0e0;
+      font-size:1rem;
+      width:100%;
     }
-    .brand img {
-      height: 70px;
-      border-radius: 10px;
+    textarea{resize:vertical;}
+    button{
+      background-color:#00d2ff;
+      color:#fff;
+      font-weight:bold;
+      border:none;
+      padding:1rem;
+      border-radius:8px;
+      font-size:1rem;
+      cursor:pointer;
+      transition:background-color 0.3s;
     }
-    .brand h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .brand p {
-      margin: 0.3rem 0 0;
-      font-size: 1.2rem;
-      color: #c6ebff;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #1a1d29;
-      padding: 1rem 0;
-    }
-    nav a {
-      color: #eaeaea;
-      text-decoration: none;
-      margin: 0 1.8rem;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00d2ff;
-    }
-    .content {
-      padding: 3rem 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    h2 {
-      color: #00d2ff;
-    }
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    label {
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    input, textarea {
-      padding: 0.8rem;
-      border-radius: 5px;
-      border: none;
-      font-size: 1rem;
-      width: 100%;
-    }
-    button {
-      background-color: #00d2ff;
-      color: #0f1117;
-      font-weight: bold;
-      border: none;
-      padding: 1rem;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #0f1117;
-      color: #888;
-      font-size: 0.9rem;
-    }
+    button:hover{background-color:#0090cc;}
 
-    /* 🌐 Estilos responsive para móviles */
-@media (max-width: 768px) {
-  .brand {
-    flex-direction: column;
-    text-align: center;
-  }
+    /* Footer profesional */
+    footer{
+      background-color:#0a1a2f;
+      padding:2rem 1rem;
+      text-align:center;
+      font-size:0.9rem;
+      color:#555;
+    }
+    .footer-contenido{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      gap:1.5rem;
+      margin-bottom:1rem;
+    }
+    .footer-contenido img{height:60px;border-radius:8px;}
+    .footer-info{text-align:left;}
+    .footer-info p{margin:0.3rem 0;}
+    .footer-copy{margin-top:1rem;font-size:0.85rem;color:#888;}
 
-  .brand h1 {
-    font-size: 2rem;
-  }
-
-  .brand p {
-    font-size: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0;
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
-
-  .content {
-    padding: 2rem 1rem;
-  }
-
-  .tecnologia-galeria {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tecnologia-item {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .modal-content {
-    margin: 15% auto;
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .servicio {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  h2, h3 {
-    font-size: 1.5rem;
-  }
-
-  ul {
-    padding-left: 1rem;
-  }
-}
-
+    /* WhatsApp */
+    .whatsapp-float{
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      background-color:#25d366;
+      color:#fff;
+      border-radius:50%;
+      padding:16px;
+      font-size:26px;
+      z-index:999;
+      box-shadow:0 4px 10px rgba(0,0,0,0.4);
+      transition:background-color .3s, transform .2s;
+    }
+    .whatsapp-float:hover{background-color:#1ebe5d;transform:scale(1.05);}
   </style>
 </head>
 <body>
@@ -184,9 +114,9 @@
     <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> +56 9 3087 5110</p>
     <p><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> Santiago, Chile (Atención LATAM)</p>
     <p><i class="fas fa-user-cog"></i> <strong>¿Tienes un flujo que automatizar?</strong> Nuestro equipo está listo para darte una solución a medida.</p>
-    <p><i class="fas fa-clock"></i> <strong>Horario de atención:</strong> Lunes a Sabado, 09:00 – 18:00 hrs.</p>
+    <p><i class="fas fa-clock"></i> <strong>Horario de atención:</strong> Lunes a Sábado, 09:00 – 18:00 hrs.</p>
 
-    <form action="https://formsubmit.co/soporte@pyautomatelabscl.com" method="POST" style="margin-top: 3rem; display: flex; flex-direction: column; gap: 1.5rem; background-color: #1a1d29; padding: 2rem; border-radius: 10px;">
+    <form action="https://formsubmit.co/soporte@pyautomatelabscl.com" method="POST" style="margin-top: 3rem; display:flex; flex-direction:column; gap:1.5rem; background-color:#f8f9fb; padding:2rem; border-radius:10px; border:1px solid #e0e0e0;">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://www.pyautomatelabs.cl/agradecimiento">
       <input type="hidden" name="_template" value="table">
@@ -211,11 +141,29 @@
     </form>
   </section>
 
+  <!-- Footer Profesional -->
   <footer>
-    PyAutomate Labs © 2025 — Automate the Smart Way
+    <div class="footer-contenido">
+      <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
+      <div>
+        <p><strong>PyAutomate Labs</strong></p>
+        <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
+        <div class="footer-info">
+          <p><i class="fas fa-phone"></i> +56 9 3087 5110</p>
+          <p><i class="fas fa-envelope"></i> soporte@pyautomatelabscl.com</p>
+          <p><i class="fas fa-globe"></i> www.pyautomatelabs.cl</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 PyAutomate Labs — Dominio reservado. Todos los derechos reservados.
+    </div>
   </footer>
+
+  <a href="https://wa.me/+56930875110" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
+
 
 
 
