@@ -82,17 +82,23 @@
       border-radius: 10px;
       background-color: #1a1d29;
       box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
     }
+    .tarjeta:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,.35); border-color: #00a2cc; }
     .tarjeta h3 {
       color: #00d2ff;
       margin-top: 0;
+      margin-bottom: .3rem;
     }
-    .tarjeta p {
-      font-size: 1rem;
+    .tarjeta .meta {
+      color: #9aa4b2;
+      font-size: .95rem;
+      margin-bottom: .5rem;
     }
+    .tarjeta p { font-size: 1rem; }
+    .cta-row { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .75rem; }
     .tarjeta a {
       display: inline-block;
-      margin-top: 10px;
       padding: 8px 12px;
       background-color: #00d2ff;
       color: #0f1117;
@@ -100,9 +106,13 @@
       border-radius: 5px;
       font-weight: bold;
     }
-    .tarjeta a:hover {
-      background-color: #00a2cc;
+    .tarjeta a:hover { background-color: #00a2cc; }
+    .btn-ghost {
+      background: transparent !important;
+      color: #eaeaea !important;
+      border: 1px solid rgba(255,255,255,.2);
     }
+    .btn-ghost:hover { background: rgba(255,255,255,.08) !important; }
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -110,66 +120,17 @@
       color: #888;
       font-size: 0.9rem;
     }
-     /* 🌐 Estilos responsive para móviles */
-@media (max-width: 768px) {
-  .brand {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .brand h1 {
-    font-size: 2rem;
-  }
-
-  .brand p {
-    font-size: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0;
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
-
-  .content {
-    padding: 2rem 1rem;
-  }
-
-  .tecnologia-galeria {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tecnologia-item {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .modal-content {
-    margin: 15% auto;
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .servicio {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  h2, h3 {
-    font-size: 1.5rem;
-  }
-
-  ul {
-    padding-left: 1rem;
-  }
-}
-  
+    /* 🌐 Responsive */
+    @media (max-width: 768px) {
+      .brand { flex-direction: column; text-align: center; }
+      .brand h1 { font-size: 2rem; }
+      .brand p { font-size: 1rem; }
+      nav { flex-direction: column; align-items: center; padding: 0.5rem 0; }
+      nav a { margin: 0.5rem 0; font-size: 1rem; }
+      .content { padding: 2rem 1rem; }
+      h2, h3 { font-size: 1.5rem; }
+      ul { padding-left: 1rem; }
+    }
   </style>
 </head>
 <body>
@@ -191,42 +152,120 @@
   </nav>
 
   <section class="content">
-    <h2><i class="fas fa-briefcase"></i> Proyectos realizados</h2>
-    <p>Estos son algunos de los proyectos que hemos desarrollado, demostrando cómo la automatización y el análisis de datos generan resultados concretos.</p>
+    <h2><i class="fas fa-briefcase"></i> Soluciones que entregamos</h2>
+    <p>Más que “scripts”, implementamos <strong>soluciones de negocio</strong> con impacto medible: menos horas-hombre, datos confiables y decisiones más rápidas. Estos son los paquetes que podemos desplegar en tu organización.</p>
 
     <div class="tarjetas">
+
+      <!-- 1 -->
       <div class="tarjeta">
-        <h3><i class="fas fa-database"></i> ETL automatizada + BigQuery</h3>
-        <p><strong>Tecnologías:</strong> Python, BigQuery, Power BI</p>
-        <p>Automatizamos el flujo de datos desde archivos crudos hasta paneles en tiempo real, con filtros, métricas y actualizaciones programadas.</p>
-        <a href="#">Ver demo</a>
-      </div>
-      <div class="tarjeta">
-        <h3><i class="fas fa-robot"></i> Bot de reportes por correo</h3>
-        <p><strong>Tecnologías:</strong> Outlook + Python</p>
-        <p>Enviamos diariamente tablas con métricas clave por proveedor directamente al correo corporativo, con formato profesional y firma.</p>
-        <a href="#">Ver demo</a>
-      </div>
-      <div class="tarjeta">
-        <h3><i class="fas fa-file-alt"></i> Formularios conectados a Google Sheets y BigQuery</h3>
-        <p><strong>Tecnologías:</strong> Apps Script, Google Forms, BigQuery</p>
-        <p>Recolectamos datos de formularios para alimentar dashboards automáticos sin intervención manual.</p>
-        <a href="#">Ver demo</a>
-      </div>
-	<div class="tarjeta">
-  	<h3><i class="fas fa-desktop"></i> Aplicaciones de escritorio con Python</h3>
-  	<p><strong>Tecnologías:</strong> Python, Tkinter</p>
-  	<p>Desarrollamos herramientas visuales para uso interno como formularios, gestores de datos, control de inventarios o sistemas de recepción personalizados.</p>
-  	<a href="#">Ver demo</a>
-      </div>
-	<div class="tarjeta">
-  	<h3><i class="fas fa-chart-line"></i> Dashboards ejecutivos y operacionales</h3>
-  	<p><strong>Tecnologías:</strong> Power BI, Looker Studio, BigQuery</p>
-  	<p>Diseñamos paneles interactivos que permiten visualizar KPIs en tiempo real, segmentar por filtros y tomar decisiones informadas desde cualquier dispositivo.</p>
-  	<a href="#">Ver demo</a>
+        <h3><i class="fas fa-database"></i> DataOps & ETL Automatizada</h3>
+        <div class="meta">Python · BigQuery · Programaciones</div>
+        <p>Orquestamos pipelines desde fuentes crudas a modelos limpios en BigQuery con validaciones, alertas y control de calidad. Listo para alimentar BI y analítica.</p>
+        <div class="cta-row">
+          <a href="#" target="_blank">Ver demo</a>
+          <a class="btn-ghost" href="/contacto">Solicitar propuesta</a>
+        </div>
       </div>
 
+      <!-- 2 -->
+      <div class="tarjeta">
+        <h3><i class="fas fa-envelope-open-text"></i> Reportería automática por correo</h3>
+        <div class="meta">Outlook · Python · HTML Email</div>
+        <p>Envío diario/semanal de reportes con tablas y KPIs por área/proveedor, branding corporativo y firmas. Adjuntos por segmento y logs de envío.</p>
+        <div class="cta-row">
+          <a href="#" target="_blank">Ver demo</a>
+          <a class="btn-ghost" href="/contacto">Cotizar</a>
+        </div>
+      </div>
 
+      <!-- 3 -->
+      <div class="tarjeta">
+        <h3><i class="fas fa-file-alt"></i> Formularios → Sheets → BigQuery</h3>
+        <div class="meta">Apps Script · Google Forms · Auditoría</div>
+        <p>Capturamos datos desde formularios, validamos en Apps Script y los cargamos en BigQuery con trazabilidad. Cero intervención manual.</p>
+        <div class="cta-row">
+          <a href="#" target="_blank">Ver demo</a>
+          <a class="btn-ghost" href="/contacto">Hablemos</a>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="tarjeta">
+        <h3><i class="fas fa-chart-line"></i> Dashboards ejecutivos & operacionales</h3>
+        <div class="meta">Power BI · Looker Studio · BigQuery</div>
+        <p>KPIs en tiempo real con segmentación por país/tienda/proveedor, vistas móviles y governance de accesos. Soporte para decisiones rápidas.</p>
+        <div class="cta-row">
+          <a href="#" target="_blank">Ver demo</a>
+          <a class="btn-ghost" href="/contacto">Solicitar demo</a>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="tarjeta">
+        <h3><i class="fas fa-desktop"></i> Aplicaciones internas (Python)</h3>
+        <div class="meta">Tkinter · CRUD · Integración BigQuery</div>
+        <p>Herramientas de escritorio para operaciones: gestión de agendas, inventarios, recepción y control. Edición con validaciones y escritura directa a BQ.</p>
+        <div class="cta-row">
+          <a href="#" target="_blank">Ver demo</a>
+          <a class="btn-ghost" href="/contacto">Quiero esto</a>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="tarjeta">
+        <h3><i class="fas fa-robot"></i> Bots conversacionales & automatizaciones</h3>
+        <div class="meta">E-mail · WhatsApp/Telegram · APIs</div>
+        <p>Asistentes que responden consultas, generan reportes y disparan procesos. Integración con APIs/ERP para ejecutar tareas desde el chat.</p>
+        <div class="cta-row">
+          <a href="#" target="_blank">Ver demo</a>
+          <a class="btn-ghost" href="/contacto">Cotizar</a>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="tarjeta">
+        <h3><i class="fas fa-globe"></i> Diseño y despliegue web administrado</h3>
+        <div class="meta">HTML/CSS/JS · Render · Cloudflare</div>
+        <p>Diseñamos tu sitio corporativo, lo publicamos en <strong>Render</strong> o <strong>Cloudflare Pages</strong>, gestionamos DNS con Cloudflare y lo dejamos productivo con HTTPS y CI/CD básico.</p>
+        <div class="cta-row">
+          <a href="#" target="_blank">Ver demo</a>
+          <a class="btn-ghost" href="/contacto">Pedir presupuesto</a>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="tarjeta">
+        <h3><i class="fas fa-plug"></i> Integraciones API & ERP</h3>
+        <div class="meta">REST/JSON · OAuth · Jobs programados</div>
+        <p>Conectamos tus sistemas (ERP, WMS, e-commerce) con pipelines y apps existentes para sincronizar catálogos, órdenes, inventarios y eventos.</p>
+        <div class="cta-row">
+          <a href="#" target="_blank">Ver demo</a>
+          <a class="btn-ghost" href="/contacto">Conversemos</a>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="tarjeta">
+        <h3><i class="fas fa-shield-alt"></i> Gobierno de datos & QA</h3>
+        <div class="meta">Validaciones · Alertas · Trazabilidad</div>
+        <p>Reglas de calidad, controles de duplicados/outliers y alertas proactivas. Bitácoras para auditoría y evidencias de carga.</p>
+        <div class="cta-row">
+          <a href="#" target="_blank">Ver demo</a>
+          <a class="btn-ghost" href="/contacto">Solicitar auditoría</a>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="tarjeta">
+        <h3><i class="fas fa-rocket"></i> Paquete “Arranque Rápido” PyME</h3>
+        <div class="meta">Sitio + Form → BQ + Dashboard</div>
+        <p>En 2–4 semanas: sitio web público, formulario de contacto/cotización a BigQuery, dashboard de leads y reportería automática por correo.</p>
+        <div class="cta-row">
+          <a href="#" target="_blank">Ver demo</a>
+          <a class="btn-ghost" href="/contacto">Quiero este paquete</a>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -236,6 +275,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
