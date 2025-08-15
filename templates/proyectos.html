@@ -6,97 +6,102 @@
   <title>Proyectos – PyAutomate Labs</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f1117;
-      color: #eaeaea;
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:'Segoe UI',sans-serif;
+      background-color:#ffffff;
+      color:#333;
     }
-    header {
-      background: linear-gradient(to right, #003973, #00d2ff);
-      padding: 3rem 2rem 2rem;
-      text-align: center;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    header{
+      background:linear-gradient(to right,#003973,#00d2ff);
+      padding:3rem 2rem 2rem;
+      text-align:center;
+      color:white;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+    .brand{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1.5rem;}
+    .brand img{height:70px;border-radius:10px;}
+    .brand h1{font-size:3rem;margin:0;}
+    .brand p{margin:0.3rem 0 0;font-size:1.2rem;color:#c6ebff;}
+    nav{display:flex;justify-content:center;background-color:#f2f2f2;padding:1rem 0;}
+    nav a{color:#333;text-decoration:none;margin:0 1.8rem;font-weight:bold;font-size:1.1rem;transition:color 0.3s;}
+    nav a:hover{color:#00d2ff;}
+    .content{padding:3rem 2rem;max-width:1100px;margin:0 auto;}
+    h2{
+      font-size:2.4rem;
+      color:#00d2ff;
+      margin-top:2rem;
     }
-    .brand img {
-      height: 70px;
-      border-radius: 10px;
+    h3{
+      font-size:1.3rem;
+      color:#00d2ff;
+      margin-top:1.2rem;
     }
-    .brand h1 {
-      font-size: 3rem;
-      margin: 0;
+    p{font-size:1.1rem;margin-bottom:1rem;}
+    .tarjetas{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+      margin-top:2rem;
     }
-    .brand p {
-      margin: 0.3rem 0 0;
-      font-size: 1.2rem;
-      color: #c6ebff;
+    .tarjeta{
+      border:1px solid #e0e0e0;
+      padding:1.5rem;
+      border-radius:12px;
+      background-color:#fff;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+      transition:transform .2s ease, box-shadow .2s ease;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #1a1d29;
-      padding: 1rem 0;
+    .tarjeta:hover{transform:translateY(-5px);box-shadow:0 8px 18px rgba(0,0,0,.15);}
+    .tarjeta h3{color:#00d2ff;margin-top:0;}
+    .cta-row{margin-top:1rem;}
+    .cta-row a{
+      display:inline-block;
+      padding:10px 14px;
+      background:#00d2ff;
+      color:white;
+      text-decoration:none;
+      border-radius:6px;
+      font-weight:bold;
+      transition:background .3s;
     }
-    nav a {
-      color: #eaeaea;
-      text-decoration: none;
-      margin: 0 1.8rem;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s;
+    .cta-row a:hover{background:#0090cc;}
+    /* Footer Profesional */
+    footer{
+      background-color:#0a1a2f;
+      padding:2rem 1rem;
+      text-align:center;
+      font-size:0.9rem;
+      color:#555;
     }
-    nav a:hover {
-      color: #00d2ff;
+    .footer-contenido{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      gap:1.5rem;
+      margin-bottom:1rem;
     }
-    .content {
-      padding: 3rem 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
+    .footer-contenido img{height:60px;border-radius:8px;}
+    .footer-info{text-align:left;}
+    .footer-info p{margin:0.3rem 0;}
+    .footer-copy{margin-top:1rem;font-size:0.85rem;color:#888;}
+    /* WhatsApp */
+    .whatsapp-float{
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      background-color:#25d366;
+      color:#fff;
+      border-radius:50%;
+      padding:16px;
+      font-size:26px;
+      z-index:999;
+      box-shadow:0 4px 10px rgba(0,0,0,0.4);
+      transition:background-color .3s, transform .2s;
     }
-    h2, h3 {
-      color: #00d2ff;
-      margin-top: 2rem;
-    }
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    .tarjetas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      margin-top: 2rem;
-    }
-    .tarjeta {
-      border: 2px solid #00d2ff;
-      padding: 1rem;
-      border-radius: 10px;
-      background-color: #1a1d29;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-    }
-    .tarjeta:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,.35); border-color: #00a2cc; }
-    .tarjeta h3 { color: #00d2ff; margin-top: 0; }
-    .cta-row { margin-top: .8rem; }
-    .cta-row a { display: inline-block; padding: 8px 12px; background:#00d2ff; color:#0f1117; text-decoration:none; border-radius:5px; font-weight:bold;}
-    .cta-row a:hover{ background:#00a2cc;}
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #0f1117;
-      color: #888;
-      font-size: 0.9rem;
-    }
+    .whatsapp-float:hover{background-color:#1ebe5d;transform:scale(1.05);}
   </style>
 </head>
 <body>
@@ -122,75 +127,82 @@
     <p>Más que scripts, implementamos soluciones de negocio con impacto real.</p>
 
     <div class="tarjetas">
-
       <div class="tarjeta">
         <h3><i class="fas fa-database"></i> DataOps & ETL Automatizada</h3>
         <p>Orquestamos pipelines desde fuentes crudas a BigQuery con validaciones y alertas.</p>
         <div class="cta-row"><a href="/contacto">Cotizar</a></div>
       </div>
-
       <div class="tarjeta">
         <h3><i class="fas fa-envelope-open-text"></i> Reportería automática por correo</h3>
         <p>Envío programado de reportes en HTML con KPIs, segmentación y firma corporativa.</p>
         <div class="cta-row"><a href="/contacto">Cotizar</a></div>
       </div>
-
       <div class="tarjeta">
         <h3><i class="fas fa-file-alt"></i> Formularios → Sheets → BigQuery</h3>
         <p>Capturamos datos desde Google Forms y los cargamos automáticamente a BigQuery.</p>
         <div class="cta-row"><a href="/contacto">Cotizar</a></div>
       </div>
-
       <div class="tarjeta">
         <h3><i class="fas fa-chart-line"></i> Dashboards ejecutivos & operacionales</h3>
         <p>Dashboards en tiempo real con Power BI / Looker Studio y filtro por unidades.</p>
         <div class="cta-row"><a href="/contacto">Cotizar</a></div>
       </div>
-
       <div class="tarjeta">
         <h3><i class="fas fa-desktop"></i> Aplicaciones internas (Python)</h3>
         <p>Desarrollo de herramientas de escritorio con edición validada y conexión a BigQuery.</p>
         <div class="cta-row"><a href="/contacto">Cotizar</a></div>
       </div>
-
       <div class="tarjeta">
         <h3><i class="fas fa-robot"></i> Bots conversacionales & automatizaciones</h3>
         <p>Bots que responden consultas y ejecutan procesos conectados a API/ERP vía chat.</p>
         <div class="cta-row"><a href="/contacto">Cotizar</a></div>
       </div>
-
       <div class="tarjeta">
         <h3><i class="fas fa-globe"></i> Diseño y despliegue web administrado</h3>
         <p>Sitio web responsive publicado en Render o Cloudflare con DNS y HTTPS configurado.</p>
         <div class="cta-row"><a href="/contacto">Cotizar</a></div>
       </div>
-
       <div class="tarjeta">
         <h3><i class="fas fa-plug"></i> Integraciones API & ERP</h3>
         <p>Sincronizamos datos entre sistemas (ERP, WMS, ecommerce) a través de APIs seguras.</p>
         <div class="cta-row"><a href="/contacto">Cotizar</a></div>
       </div>
-
       <div class="tarjeta">
         <h3><i class="fas fa-shield-alt"></i> Gobierno de datos & QA</h3>
         <p>Reglas de calidad, controles de duplicados/outliers y alertas automáticas.</p>
         <div class="cta-row"><a href="/contacto">Cotizar</a></div>
       </div>
-
       <div class="tarjeta">
         <h3><i class="fas fa-rocket"></i> Paquete “Arranque Rápido” PyME</h3>
         <p>Sitio web público + formulario a BigQuery + dashboard + correo automático en 4 semanas.</p>
         <div class="cta-row"><a href="/contacto">Cotizar</a></div>
       </div>
-
     </div>
   </section>
 
+  <!-- Footer Profesional -->
   <footer>
-    PyAutomate Labs © 2025 — Automate the Smart Way
+    <div class="footer-contenido">
+      <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
+      <div>
+        <p><strong>PyAutomate Labs</strong></p>
+        <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
+        <div class="footer-info">
+          <p><i class="fas fa-phone"></i> +56 9 3087 5110</p>
+          <p><i class="fas fa-envelope"></i> soporte@pyautomatelabscl.com</p>
+          <p><i class="fas fa-globe"></i> www.pyautomatelabs.cl</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 PyAutomate Labs — Dominio reservado. Todos los derechos reservados.
+    </div>
   </footer>
+
+  <a href="https://wa.me/+56930875110" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
+
 
 
 
