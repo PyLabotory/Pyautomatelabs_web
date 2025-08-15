@@ -70,16 +70,54 @@ section.empresa p,section.mision p{max-width:850px;margin:0 auto;font-size:1.15r
   transition:transform 0.3s, box-shadow 0.3s;
 }
 .card:hover{transform:translateY(-6px);box-shadow:0 6px 20px rgba(0,0,0,0.08);}
-.card i{
-  font-size:2.2rem;
-  color:white;
+.card svg{
+  width:50px;
+  height:50px;
+  fill:white;
   background-color:#00d2ff;
-  padding:15px;
+  padding:12px;
   border-radius:50%;
   margin-bottom:1rem;
 }
 .card h3{color:#00d2ff;margin-bottom:0.7rem;font-size:1.2rem;}
 .card p{font-size:1rem;color:#555;line-height:1.6;}
+/* Cómo funciona */
+.como-funciona{
+  background-color:#f8f9fb;
+  padding:4rem 2rem;
+  text-align:center;
+}
+.como-funciona h2{
+  font-size:2.2rem;
+  color:#00d2ff;
+  margin-bottom:2rem;
+}
+.pasos{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.paso{
+  flex:1;
+  min-width:200px;
+  max-width:220px;
+  background-color:white;
+  border:1px solid #e0e0e0;
+  border-radius:12px;
+  padding:1rem;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+.paso svg{
+  width:40px;
+  height:40px;
+  fill:#00d2ff;
+  margin-bottom:0.5rem;
+}
+.paso p{
+  font-size:0.95rem;
+  color:#555;
+}
 footer{
   text-align:center;
   padding:2rem 1rem;
@@ -138,30 +176,54 @@ footer{
 </section>
 <section class="features">
   <div class="card">
-    <i class="fas fa-robot"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M48 6v8h-8v8h-8v8h-8v8h-8v8H6V6h42z"/></svg>
     <h3>Automatización Inteligente</h3>
     <p>Eliminamos tareas repetitivas con bots que ejecutan flujos y rutinas con precisión.</p>
   </div>
   <div class="card">
-    <i class="fas fa-database"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M32 2C15.4 2 2 9.6 2 19v26c0 9.4 13.4 17 30 17s30-7.6 30-17V19c0-9.4-13.4-17-30-17z"/></svg>
     <h3>Procesamiento de Datos</h3>
     <p>Conectamos tus fuentes de datos y las estructuramos para dashboards o análisis avanzados.</p>
   </div>
   <div class="card">
-    <i class="fas fa-chart-line"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M4 8v48h56V8H4zm4 4h48v8H8v-8zm0 12h12v28H8V24zm16 0h12v28H24V24zm16 0h12v28H40V24z"/></svg>
     <h3>Visualización de Alto Impacto</h3>
     <p>Power BI y Looker Studio para que tu operación se entienda con un solo vistazo.</p>
   </div>
   <div class="card">
-    <i class="fas fa-handshake"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M8 12h48v8H8v-8zm0 16h48v8H8v-8zm0 16h48v8H8v-8z"/></svg>
     <h3>Enfoque Consultivo</h3>
     <p>No vendemos scripts. Creamos soluciones alineadas a tus objetivos estratégicos.</p>
   </div>
 </section>
+
+<section class="como-funciona">
+  <h2>Cómo Funciona</h2>
+  <div class="pasos">
+    <div class="paso">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M8 8h48v8H8V8zm0 16h48v8H8v-8zm0 16h48v8H8v-8z"/></svg>
+      <p>Recolección de datos desde distintas fuentes</p>
+    </div>
+    <div class="paso">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M32 2L12 14v36l20 12 20-12V14L32 2z"/></svg>
+      <p>Procesamiento y transformación (ETL)</p>
+    </div>
+    <div class="paso">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M4 8v48h56V8H4zm4 4h48v8H8v-8zm0 12h48v28H8V24z"/></svg>
+      <p>Visualización en dashboards interactivos</p>
+    </div>
+    <div class="paso">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M8 12h48v40H8V12zm4 4v32h40V16H12z"/></svg>
+      <p>Entrega y optimización continua</p>
+    </div>
+  </div>
+</section>
+
 <footer>PyAutomate Labs © 2025 — Automate the Smart Way</footer>
 <a href="https://wa.me/+56930875110" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
+
 
 
 
