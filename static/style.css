@@ -354,5 +354,27 @@ footer {
   }
 }
 
+/* Fix responsive móvil */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+main, section, .content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.tarjeta, .modal-content, .tecnologia-item {
+  max-width: 100%;
+}
+
+html, body {
+  overflow-x: hidden; /* Evita scroll lateral molesto */
+}
+
+
+
 
 
