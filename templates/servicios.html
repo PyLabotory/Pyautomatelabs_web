@@ -12,6 +12,9 @@
       font-family:'Segoe UI',sans-serif;
       background-color:#ffffff;
       color:#333;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
     }
     header{
       background:linear-gradient(to right,#003973,#00d2ff);
@@ -27,7 +30,7 @@
     nav{display:flex;justify-content:center;background-color:#f2f2f2;padding:1rem 0;}
     nav a{color:#333;text-decoration:none;margin:0 1.8rem;font-weight:bold;font-size:1.1rem;transition:color 0.3s;}
     nav a:hover{color:#00d2ff;}
-    .content{padding:3rem 2rem;max-width:1100px;margin:0 auto;}
+    main{flex:1;padding:3rem 2rem;max-width:1100px;margin:0 auto;}
     h2{
       font-size:2.6rem;
       color:#00d2ff;
@@ -38,6 +41,7 @@
       margin-bottom:0.7rem;
       font-size:1.2rem;
     }
+    p, li{font-size:1.05rem;line-height:1.6;}
     ul{padding-left:1.5rem;}
     .divider{margin:3rem auto;height:2px;background:linear-gradient(to right,transparent,#00d2ff,transparent);width:80%;}
     .tecnologia-galeria{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;}
@@ -120,7 +124,8 @@
     <a href="/proyectos">Proyectos</a>
     <a href="/contacto">Contacto</a>
   </nav>
-  <section class="content">
+
+  <main>
     <p><strong>Trabajamos principalmente con:</strong> Python, Java, Apps Script, Power Automate, SQL, BigQuery y más.</p>
     <h2><i class="fas fa-code"></i> Tecnologías que dominamos</h2>
     <div class="tecnologia-galeria">
@@ -144,7 +149,7 @@
       </div>
     </div>
 
- <!-- MODALES -->
+    <!-- MODALES -->
     <div class="modal" id="pythonModal">
       <div class="modal-content">
         <span class="close" onclick="cerrarModal('pythonModal')">&times;</span>
@@ -280,7 +285,7 @@
     </div>
 
     <p><strong>⭐ Agenda tu diagnóstico sin costo.</strong> Cuéntanos tus procesos y nosotros nos encargamos del resto. Te ayudamos a <strong>crecer con tecnología real y simple</strong>.</p>
-  </section>
+  </main>
 
   <!-- Footer Profesional -->
   <footer>
@@ -304,10 +309,3 @@
   <a href="https://wa.me/+56930875110" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
-
-
-
-
-
-
-
