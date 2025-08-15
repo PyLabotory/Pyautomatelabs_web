@@ -318,12 +318,41 @@ footer {
 }
 
 /* Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   header {padding: 1rem; font-size: 1.2rem;}
   nav {flex-direction: column; align-items: center; gap: 1rem;}
   nav a {font-size: 1rem;}
   section {margin: 1rem; padding: 1rem;}
   ul li {flex-direction: column; align-items: flex-start;}
+
+  /* 👇 lo nuevo que te pasé */
+  header h1 {font-size: 1.8rem;}
+  header p {font-size: 1rem;}
+
+  h2 {font-size: 1.6rem;}
+  h3 {font-size: 1.2rem;}
+  p  {font-size: 0.95rem;}
+
+  .tarjetas {
+    grid-template-columns: 1fr; /* Tarjetas en una sola columna */
+  }
+
+  .card, .paso {
+    width: 100%; /* Para que las cards y pasos ocupen todo el ancho */
+    max-width: none;
+  }
+
+  .modal-content {
+    width: 95%; /* Modales más ajustados */
+    margin: 20% auto;
+  }
+
+  form {
+    padding: 1rem;
+    gap: 1rem;
+  }
 }
+
 
 
