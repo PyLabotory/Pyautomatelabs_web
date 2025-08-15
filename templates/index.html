@@ -1,172 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio – PyAutomate Labs</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    * { box-sizing: border-box; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyAutomate Labs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f9ff;
+            color: #333;
+        }
 
-    body { margin:0; font-family:'Segoe UI',sans-serif; background:#0f1117; color:#eaeaea; }
+        header {
+            background-color: #0078d7;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    header{background:linear-gradient(to right,#003973,#00d2ff); padding:3rem 2rem 2rem; text-align:center; color:#fff; box-shadow:0 4px 10px rgba(0,0,0,.3);}
-    .brand{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1.5rem;}
-    .brand img{height:70px;border-radius:10px;}
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
 
-    nav{display:flex;justify-content:center;background:#1a1d29;padding:1rem 0}
-    nav a{color:#eaeaea;text-decoration:none;margin:0 1.8rem;font-weight:bold;font-size:1.1rem;transition:color .3s;}
-    nav a:hover{color:#00d2ff}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
 
-    section.empresa,section.mision{padding:4rem 2rem;text-align:center}
-    section.empresa{background:#121520} section.mision{background:#10131c}
-    section.empresa h2,section.mision h2{font-size:2.6rem;color:#00d2ff;margin-bottom:1rem;}
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-    .hero{background:#10131c;padding:4rem 2rem;text-align:center;}
-    .hero h2{font-size:2.5rem;color:#00d2ff;margin-bottom:1rem;}
-    .hero p{font-size:1.2rem;max-width:800px;margin:0 auto;line-height:1.8;color:#d0d0d0;}
-    .buttons{margin-top:2rem;}
-    .buttons a{background:#00d2ff;color:#0f1117;padding:.9rem 2rem;border-radius:10px;text-decoration:none;font-weight:bold;margin:0 1rem;font-size:1rem;box-shadow:0 4px 15px rgba(0,210,255,.3);transition:all .3s;}
-    .buttons a:hover{background:#0090cc;}
+        .hero {
+            background: linear-gradient(to right, #00a4ff, #00d4ff);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
 
-    /* Cards (rediseñadas) */
-    .features{padding:4rem 2rem;background:#121520; display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;}
-    .service-card{
-      width:260px;
-      background:#1c1f2c;
-      border:2px solid #00d2ff;
-      border-radius:14px;
-      padding:2rem;
-      text-align:center;
-      box-shadow:0 0 10px rgba(0,0,0,.25);
-      transition:transform .2s;
-    }
-    .service-card:hover{transform:translateY(-4px);}
-    .service-card i{font-size:2.4rem;color:#00d2ff;margin-bottom:1rem;}
-    .service-card h3{color:#00d2ff;margin:0.3rem 0 .7rem;}
-    .service-card p{font-size:1rem;color:#ccc;}
+        .hero h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
 
-    /* Nueva sección: Cómo trabajamos */
-    .workflow{background:#10131c;padding:4rem 2rem;text-align:center;}
-    .workflow h2{color:#00d2ff;margin-bottom:2rem;}
-    .workflow-steps{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;}
-    .step{
-      background:#1c1f2c;
-      border:2px solid #00d2ff;
-      border-radius:12px;
-      width:240px;
-      padding:1.5rem;
-      text-align:center;
-      color:#eaeaea;
-    }
-    .step i{font-size:2rem;color:#00d2ff;margin-bottom:0.5rem;}
-    .step h4{margin:0.5rem 0;font-size:1.1rem;color:#00d2ff;}
-    .step p{font-size:.95rem;color:#ccc;}
+        .hero p {
+            font-size: 1.2em;
+        }
 
-    footer{text-align:center;padding:2rem 1rem;background:#0f1117;color:#888;font-size:.9rem;}
+        .section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-    /* Botón WhatsApp */
-    .whatsapp-float{position:fixed;bottom:25px;right:25px;background:#25d366;color:#fff;border-radius:50%;padding:16px;font-size:26px;z-index:999;box-shadow:0 4px 10px rgba(0,0,0,.4);transition:background .3s,transform .2s;}
-    .whatsapp-float:hover{background:#1ebe5d;transform:scale(1.05);}
-  </style>
+        .section h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0078d7;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #00a4ff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+
+        .card h4 {
+            margin-bottom: 10px;
+            color: #0078d7;
+        }
+
+        .map-section {
+            text-align: center;
+            padding: 40px;
+            background-color: #eaf6ff;
+        }
+
+        .map-section img {
+            max-width: 90%;
+            border: 3px solid #00a4ff;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #0078d7;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 25px;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <header>
-  <div class="brand">
-    <img src="/static/images/pylabs_logo.png" alt="Logo PyAutomateLabs">
-    <div>
-      <h1>PyAutomate Labs</h1>
-      <p>⚙️ Automatiza. Optimiza. Escala. — Su partner digital</p>
-    </div>
-  </div>
+    <h1>PyAutomate Labs</h1>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Proyectos</a>
+        <a href="#">Contacto</a>
+    </nav>
 </header>
 
-<nav>
-  <a href="/">Inicio</a>
-  <a href="/servicios">Servicios</a>
-  <a href="/proyectos">Proyectos</a>
-  <a href="/contacto">Contacto</a>
-</nav>
-
-<section class="empresa">
-  <h2>¿Quiénes Somos?</h2>
-  <p>PyAutomate Labs es una empresa especializada en automatización, integración de datos y desarrollo digital a medida para pymes. Nuestra misión es poner tecnología de nivel empresarial al alcance de su negocio.</p>
-</section>
-
-<section class="mision">
-  <h2>Nuestra Misión</h2>
-  <p>Democratizar el acceso a la automatización, permitiendo a las empresas competir con procesos inteligentes, escalables y eficientes.</p>
-</section>
-
 <section class="hero">
-  <h2>Transformamos procesos en oportunidades</h2>
-  <p>Reducimos tareas manuales, conectamos sistemas y generamos visibilidad en tiempo real para una toma de decisiones ágil.</p>
-  <div class="buttons">
-    <a href="/servicios">Ver Servicios</a>
-    <a href="/contacto">Cotizar Ahora</a>
-  </div>
+    <h2>Automatización Inteligente para tu Negocio</h2>
+    <p>Soluciones en Python, BigQuery, Power BI, Looker Studio y más</p>
 </section>
 
-<!-- Servicios -->
-<section class="features">
-  <div class="service-card">
-    <i class="fas fa-robot"></i>
-    <h3>Automatización de Procesos</h3>
-    <p>Diseñamos flujos automáticos que eliminan tareas manuales y reducen tiempos operativos.</p>
-  </div>
-  <div class="service-card">
-    <i class="fas fa-database"></i>
-    <h3>Integración y Tratamiento de Datos</h3>
-    <p>Centralizamos y estructuramos información en BigQuery para análisis y reportería.</p>
-  </div>
-  <div class="service-card">
-    <i class="fas fa-chart-line"></i>
-    <h3>Dashboards Ejecutivos</h3>
-    <p>Implementamos paneles en Power BI o Looker Studio con KPIs clave y acceso móvil.</p>
-  </div>
-  <div class="service-card">
-    <i class="fas fa-globe"></i>
-    <h3>Desarrollo y Despliegue Web</h3>
-    <p>Construimos y publicamos sitios corporativos en Render o Cloudflare Pages con HTTPS.</p>
-  </div>
+<section class="section">
+    <h3>¿Qué Hacemos?</h3>
+    <div class="cards">
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2620/2620267.png" alt="Automatización">
+            <h4>Automatización de Procesos</h4>
+            <p>Implementamos flujos automáticos con Python, Power Automate y Google Apps Script.</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3039/3039387.png" alt="Datos">
+            <h4>Analítica y BI</h4>
+            <p>Transformamos datos en decisiones usando BigQuery, Power BI y Looker Studio.</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/481/481652.png" alt="Integraciones">
+            <h4>Integraciones</h4>
+            <p>Conectamos sistemas, APIs y ERPs para centralizar tu información en tiempo real.</p>
+        </div>
+    </div>
 </section>
 
-<!-- Cómo trabajamos -->
-<section class="workflow">
-  <h2>¿Cómo trabajamos?</h2>
-  <div class="workflow-steps">
-    <div class="step">
-      <i class="fas fa-search"></i>
-      <h4>Diagnóstico</h4>
-      <p>Analizamos sus procesos actuales e identificamos oportunidades concretas.</p>
-    </div>
-    <div class="step">
-      <i class="fas fa-cogs"></i>
-      <h4>Diseño</h4>
-      <p>Construimos la arquitectura de su solución y validamos etapas con usted.</p>
-    </div>
-    <div class="step">
-      <i class="fas fa-rocket"></i>
-      <h4>Implementación</h4>
-      <p>Automatizamos e integramos la solución con sus sistemas.</p>
-    </div>
-    <div class="step">
-      <i class="fas fa-sync-alt"></i>
-      <h4>Optimización</h4>
-      <p>Monitoreamos y mejoramos continuamente los resultados obtenidos.</p>
-    </div>
-  </div>
+<section class="map-section">
+    <h3>Cómo Funciona</h3>
+    <img src="mapa_flujo.png" alt="Mapa de Flujo del Proceso">
 </section>
 
 <footer>
-  PyAutomate Labs © 2025 — Automate the Smart Way
+    <p>© 2025 PyAutomate Labs - Soluciones Inteligentes</p>
 </footer>
 
-<a href="https://wa.me/+56912345678" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/56912345678" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
+
+
 
 
 
