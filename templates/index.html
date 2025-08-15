@@ -125,12 +125,39 @@ section.empresa p,section.mision p{max-width:850px;margin:0 auto;font-size:1.15r
   color:#555;
   line-height:1.5;
 }
+/* Footer profesional */
 footer{
+  background-color:#0a1a2f;
+  color:white;
+  padding:2.5rem 1rem;
+  margin-top:2rem;
+}
+.footer-contenido{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:1.5rem;
   text-align:center;
-  padding:2rem 1rem;
-  background-color:#f2f2f2;
-  color:#888;
-  font-size:0.9rem;
+}
+.footer-contenido img{
+  height:60px;
+}
+.footer-info{
+  flex:1;
+  min-width:220px;
+}
+.footer-info p{
+  margin:0.3rem 0;
+  font-size:0.95rem;
+}
+.footer-copy{
+  text-align:center;
+  margin-top:1.5rem;
+  font-size:0.85rem;
+  color:#aaa;
 }
 /* WhatsApp */
 .whatsapp-float{
@@ -231,10 +258,26 @@ footer{
   </div>
 </section>
 
-<footer>PyAutomate Labs © 2025 — Automate the Smart Way</footer>
+<!-- Footer profesional -->
+<footer>
+  <div class="footer-contenido">
+    <img src="/static/images/pylabs_logo.png" alt="Logo PyAutomate Labs">
+    <div class="footer-info">
+      <p><i class="fas fa-phone"></i> +56 9 3087 5110</p>
+      <p><i class="fas fa-envelope"></i> contacto@pyautomatelabs.com</p>
+      <p><i class="fas fa-globe"></i> www.pyautomatelabs.com</p>
+    </div>
+  </div>
+  <div class="footer-copy">
+    © 2025 PyAutomate Labs — Dominio reservado. Todos los derechos reservados.
+  </div>
+</footer>
+
 <a href="https://wa.me/+56930875110" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
+
+
 
 
 
