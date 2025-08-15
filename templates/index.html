@@ -80,13 +80,49 @@ section.empresa p,section.mision p{max-width:850px;margin:0 auto;font-size:1.15r
 }
 .card h3{color:#00d2ff;margin-bottom:0.7rem;font-size:1.2rem;}
 .card p{font-size:1rem;color:#555;line-height:1.6;}
-footer{
-  text-align:center;
-  padding:2rem 1rem;
-  background-color:#f2f2f2;
-  color:#888;
-  font-size:0.9rem;
+
+/* Cómo Funciona */
+.como-funciona {
+  padding: 4rem 2rem;
+  background-color: #f8f9fb;
+  text-align: center;
 }
+.como-funciona h2 {
+  font-size: 2.4rem;
+  color: #00d2ff;
+  margin-bottom: 2rem;
+}
+.pasos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.paso {
+  flex: 1 1 220px;
+  max-width: 250px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.paso h3 {
+  color: #00d2ff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.paso p {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 0.2rem 0;
+}
+.paso strong {
+  color: #333;
+}
+
 /* WhatsApp */
 .whatsapp-float{
   position:fixed;
@@ -158,10 +194,39 @@ footer{
     <p>No vendemos scripts. Creamos soluciones alineadas a tus objetivos estratégicos.</p>
   </div>
 </section>
+
+<!-- Cómo Funciona -->
+<section class="como-funciona">
+  <h2>¿Cómo Funciona?</h2>
+  <div class="pasos">
+    <div class="paso">
+      <h3>Paso 1: Diagnóstico inicial</h3>
+      <p>Analizamos tus procesos para descubrir el potencial de automatización.</p>
+      <p><strong>Beneficio:</strong> Análisis personalizado de tus necesidades operativas.</p>
+    </div>
+    <div class="paso">
+      <h3>Paso 2: Diseño de solución</h3>
+      <p>Desarrollamos una estrategia hecha a medida para tus objetivos.</p>
+      <p><strong>Beneficio:</strong> Soluciones alineadas con tu crecimiento.</p>
+    </div>
+    <div class="paso">
+      <h3>Paso 3: Implementación</h3>
+      <p>Configuramos robots que generan resultados inmediatos.</p>
+      <p><strong>Beneficio:</strong> Resultados inmediatos y tangibles.</p>
+    </div>
+    <div class="paso">
+      <h3>Paso 4: Optimización continua</h3>
+      <p>Mejoramos constantemente para garantizar tu éxito.</p>
+      <p><strong>Beneficio:</strong> Adaptación a las necesidades cambiantes.</p>
+    </div>
+  </div>
+</section>
+
 <footer>PyAutomate Labs © 2025 — Automate the Smart Way</footer>
 <a href="https://wa.me/+56930875110" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
+
 
 
 
