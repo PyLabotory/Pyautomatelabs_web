@@ -7,6 +7,17 @@ body {
     color: #333;
 }
 
+/* 👇 nuevo para fijar footer abajo */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main, section {
+    flex: 1;
+}
+
 header {
     background: linear-gradient(90deg, #0a3871, #004085);
     color: white;
