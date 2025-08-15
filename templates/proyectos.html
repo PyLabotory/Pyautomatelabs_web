@@ -12,6 +12,9 @@
       font-family:'Segoe UI',sans-serif;
       background-color:#ffffff;
       color:#333;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
     }
     header{
       background:linear-gradient(to right,#003973,#00d2ff);
@@ -27,7 +30,7 @@
     nav{display:flex;justify-content:center;background-color:#f2f2f2;padding:1rem 0;}
     nav a{color:#333;text-decoration:none;margin:0 1.8rem;font-weight:bold;font-size:1.1rem;transition:color 0.3s;}
     nav a:hover{color:#00d2ff;}
-    main{padding:3rem 2rem;max-width:1100px;margin:0 auto;}
+    main{flex:1;padding:3rem 2rem;max-width:1100px;margin:0 auto;}
     h2{
       font-size:2.4rem;
       color:#00d2ff;
@@ -38,13 +41,10 @@
       color:#00d2ff;
       margin-top:1.2rem;
     }
-    p{font-size:1.1rem;margin-bottom:1rem;}
+    p{font-size:1.05rem;line-height:1.7;color:#555;}
     .descripcion-proyectos{
       margin-top:2rem;
       margin-bottom:2rem;
-      line-height:1.7;
-      font-size:1.05rem;
-      color:#555;
     }
     .tarjetas{
       display:grid;
@@ -74,7 +74,7 @@
       transition:background .3s;
     }
     .cta-row a:hover{background:#0090cc;}
-    /* Footer Profesional */
+    /* Footer */
     footer{
       background-color:#0a1a2f;
       padding:2rem 1rem;
@@ -133,7 +133,6 @@
     <h2><i class="fas fa-briefcase"></i> Soluciones que entregamos</h2>
     <p>Más que scripts, implementamos soluciones de negocio con impacto real.</p>
 
-    <!-- NUEVO BLOQUE DESCRIPTIVO -->
     <div class="descripcion-proyectos">
       <p>En <strong>PyAutomate Labs</strong> creemos que cada proyecto es una oportunidad 
       para transformar procesos y agregar valor real a la operación de nuestros clientes. 
@@ -145,7 +144,6 @@
       pero con un enfoque consultivo que garantiza que cada solución esté alineada 
       con tus objetivos estratégicos. 🚀</p>
     </div>
-    <!-- FIN NUEVO BLOQUE -->
 
     <div class="tarjetas">
       <div class="tarjeta">
@@ -201,7 +199,6 @@
     </div>
   </main>
 
-  <!-- Footer Profesional -->
   <footer>
     <div class="footer-contenido">
       <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
