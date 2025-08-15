@@ -6,192 +6,93 @@
   <title>Servicios – PyAutomate Labs</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f1117;
-      color: #eaeaea;
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:'Segoe UI',sans-serif;
+      background-color:#ffffff;
+      color:#333;
     }
-    header {
-      background: linear-gradient(to right, #003973, #00d2ff);
-      padding: 3rem 2rem 2rem;
-      text-align: center;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    header{
+      background:linear-gradient(to right,#003973,#00d2ff);
+      padding:3rem 2rem 2rem;
+      text-align:center;
+      color:white;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+    .brand{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1.5rem;}
+    .brand img{height:70px;border-radius:10px;}
+    .brand h1{font-size:3rem;margin:0;}
+    .brand p{margin:0.3rem 0 0;font-size:1.2rem;color:#c6ebff;}
+    nav{display:flex;justify-content:center;background-color:#f2f2f2;padding:1rem 0;}
+    nav a{color:#333;text-decoration:none;margin:0 1.8rem;font-weight:bold;font-size:1.1rem;transition:color 0.3s;}
+    nav a:hover{color:#00d2ff;}
+    .content{padding:3rem 2rem;max-width:1100px;margin:0 auto;}
+    h2,h3{color:#00d2ff;margin-top:2rem;}
+    ul{padding-left:1.5rem;}
+    .divider{margin:3rem auto;height:2px;background:linear-gradient(to right,transparent,#00d2ff,transparent);width:80%;}
+    .tecnologia-galeria{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;}
+    .tecnologia-item{
+      background-color:#fff;
+      border-radius:10px;
+      padding:1rem;
+      width:180px;
+      text-align:center;
+      border:1px solid #e0e0e0;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+      cursor:pointer;
+      transition:transform 0.3s, box-shadow 0.3s;
     }
-    .brand img {
-      height: 70px;
-      border-radius: 10px;
+    .tecnologia-item:hover{transform:translateY(-6px);box-shadow:0 6px 20px rgba(0,0,0,0.08);}
+    .tecnologia-item img{max-width:100%;max-height:80px;object-fit:contain;}
+    .modal{display:none;position:fixed;z-index:999;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);}
+    .modal-content{
+      background-color:#fff;
+      margin:10% auto;
+      padding:2rem;
+      border:1px solid #00d2ff;
+      width:90%;
+      max-width:600px;
+      border-radius:10px;
+      color:#333;
+      position:relative;
     }
-    .brand h1 {
-      font-size: 3rem;
-      margin: 0;
+    .close{position:absolute;top:10px;right:20px;color:#00d2ff;font-size:24px;cursor:pointer;}
+    /* Footer */
+    footer{
+      background-color:#f2f2f2;
+      padding:2rem 1rem;
+      text-align:center;
+      font-size:0.9rem;
+      color:#555;
     }
-    .brand p {
-      margin: 0.3rem 0 0;
-      font-size: 1.2rem;
-      color: #c6ebff;
+    .footer-contenido{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      gap:1.5rem;
+      margin-bottom:1rem;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #1a1d29;
-      padding: 1rem 0;
+    .footer-contenido img{height:60px;border-radius:8px;}
+    .footer-info{text-align:left;}
+    .footer-info p{margin:0.3rem 0;}
+    .footer-copy{margin-top:1rem;font-size:0.85rem;color:#888;}
+    /* WhatsApp */
+    .whatsapp-float{
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      background-color:#25d366;
+      color:#fff;
+      border-radius:50%;
+      padding:16px;
+      font-size:26px;
+      z-index:999;
+      box-shadow:0 4px 10px rgba(0,0,0,0.4);
+      transition:background-color .3s, transform .2s;
     }
-    nav a {
-      color: #eaeaea;
-      text-decoration: none;
-      margin: 0 1.8rem;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00d2ff;
-    }
-    .content {
-      padding: 3rem 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    h2, h3 {
-      color: #00d2ff;
-      margin-top: 2rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    .divider {
-      margin: 3rem auto;
-      height: 2px;
-      background: linear-gradient(to right, transparent, #00d2ff, transparent);
-      width: 80%;
-    }
-    .tecnologia-galeria {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .tecnologia-item {
-      background-color: #1c1f2c;
-      border-radius: 10px;
-      padding: 1rem;
-      width: 180px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      cursor: pointer;
-    }
-    .tecnologia-item img {
-      max-width: 100%;
-      max-height: 80px;
-      object-fit: contain;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.7);
-    }
-    .modal-content {
-      background-color: #1f2533;
-      margin: 10% auto;
-      padding: 2rem;
-      border: 1px solid #00d2ff;
-      width: 90%;
-      max-width: 600px;
-      border-radius: 10px;
-      color: #eaeaea;
-      position: relative;
-    }
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      color: #00d2ff;
-      font-size: 24px;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #0f1117;
-      color: #888;
-      font-size: 0.9rem;
-    }
-
-    /* 🌐 Estilos responsive para móviles */
-@media (max-width: 768px) {
-  .brand {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .brand h1 {
-    font-size: 2rem;
-  }
-
-  .brand p {
-    font-size: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0;
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
-
-  .content {
-    padding: 2rem 1rem;
-  }
-
-  .tecnologia-galeria {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tecnologia-item {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .modal-content {
-    margin: 15% auto;
-    width: 90%;
-    padding: 1.5rem;
-  }
-
-  .servicio {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  h2, h3 {
-    font-size: 1.5rem;
-  }
-
-  ul {
-    padding-left: 1rem;
-  }
-}
-
+    .whatsapp-float:hover{background-color:#1ebe5d;transform:scale(1.05);}
   </style>
 </head>
 <body>
@@ -200,7 +101,7 @@
       <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomateLabs">
       <div>
         <h1>PyAutomate Labs</h1>
-        <p>🚀 Soluciones reales. Resultados medibles. — Automatización que transforma negocios</p>
+        <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
       </div>
     </div>
   </header>
@@ -215,32 +116,26 @@
     <h2><i class="fas fa-code"></i> Tecnologías que dominamos</h2>
     <div class="tecnologia-galeria">
       <div class="tecnologia-item" onclick="abrirModal('pythonModal')">
-        <img src="{{ url_for('static', filename='images/python_logo.png') }}" alt="Python">
-        <p>Python</p>
+        <img src="{{ url_for('static', filename='images/python_logo.png') }}" alt="Python"><p>Python</p>
       </div>
       <div class="tecnologia-item" onclick="abrirModal('appsModal')">
-        <img src="{{ url_for('static', filename='images/app_scrip_logo_2.png') }}" alt="Apps Script">
-        <p>Apps Script</p>
+        <img src="{{ url_for('static', filename='images/app_scrip_logo_2.png') }}" alt="Apps Script"><p>Apps Script</p>
       </div>
       <div class="tecnologia-item" onclick="abrirModal('javaModal')">
-        <img src="{{ url_for('static', filename='images/java_logo.png') }}" alt="Java">
-        <p>Java</p>
+        <img src="{{ url_for('static', filename='images/java_logo.png') }}" alt="Java"><p>Java</p>
       </div>
       <div class="tecnologia-item" onclick="abrirModal('sqlModal')">
-        <img src="{{ url_for('static', filename='images/sql_logo.png') }}" alt="SQL">
-        <p>SQL</p>
+        <img src="{{ url_for('static', filename='images/sql_logo.png') }}" alt="SQL"><p>SQL</p>
       </div>
       <div class="tecnologia-item" onclick="abrirModal('bqModal')">
-        <img src="{{ url_for('static', filename='images/bigquery_icon_2.png') }}" alt="BigQuery">
-        <p>BigQuery</p>
+        <img src="{{ url_for('static', filename='images/bigquery_icon_2.png') }}" alt="BigQuery"><p>BigQuery</p>
       </div>
       <div class="tecnologia-item" onclick="abrirModal('lookerModal')">
-        <img src="{{ url_for('static', filename='images/studio_logo.png') }}" alt="Looker Studio">
-        <p>Looker</p>
+        <img src="{{ url_for('static', filename='images/studio_logo.png') }}" alt="Looker Studio"><p>Looker</p>
       </div>
     </div>
 
-    <!-- MODALES -->
+ <!-- MODALES -->
     <div class="modal" id="pythonModal">
       <div class="modal-content">
         <span class="close" onclick="cerrarModal('pythonModal')">&times;</span>
@@ -378,11 +273,29 @@
     <p><strong>⭐ Agenda tu diagnóstico sin costo.</strong> Cuéntanos tus procesos y nosotros nos encargamos del resto. Te ayudamos a <strong>crecer con tecnología real y simple</strong>.</p>
   </section>
 
+  <!-- Footer Profesional -->
   <footer>
-    PyAutomate Labs © 2025 — Automate the Smart Way
+    <div class="footer-contenido">
+      <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
+      <div>
+        <p><strong>PyAutomate Labs</strong></p>
+        <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
+        <div class="footer-info">
+          <p><i class="fas fa-phone"></i> +56 9 3087 5110</p>
+          <p><i class="fas fa-envelope"></i> soporte@pyautomatelabscl.com</p>
+          <p><i class="fas fa-globe"></i> www.pyautomatelabs.cl</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 PyAutomate Labs — Dominio reservado. Todos los derechos reservados.
+    </div>
   </footer>
+
+  <a href="https://wa.me/+56930875110" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
+
 
 
 
