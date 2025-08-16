@@ -284,6 +284,15 @@ footer {
   .card,.paso{width:100%;}
 }
 
+/* ---------------------------------
+   Título de la sección "¿Cómo Funciona?"
+----------------------------------*/
+.como-funciona-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
 
 
 
