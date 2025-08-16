@@ -12,7 +12,7 @@
 
 <header>
   <div class="brand">
-    <img src="{{ url_for('static','images/pylabs_logo.png')}}" alt="Logo PyAutomate Labs">
+    <img src="{{ url_for('static', filename='images/pylabs_logo.png')}}" alt="Logo PyAutomate Labs">
     <div>
       <h1>PyAutomate Labs</h1>
       <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
@@ -35,17 +35,17 @@
     <p style="text-align:center"><strong>Python, Java, Apps Script, Power Automate, SQL, BigQuery, Looker Studio</strong></p>
 
     <div class="features">
-      <div class="card" onclick="abrirModal('py')"><img src="{{url_for('static','images/python_logo.png')}}" alt="Python"><h3>Python</h3></div>
-      <div class="card" onclick="abrirModal('apps')"><img src="{{url_for('static','images/app_scrip_logo_2.png')}}" alt="Apps"><h3>Apps Script</h3></div>
-      <div class="card" onclick="abrirModal('java')"><img src="{{url_for('static','images/java_logo.png')}}" alt="Java"><h3>Java</h3></div>
-      <div class="card" onclick="abrirModal('sql')"><img src="{{url_for('static','images/sql_logo.png')}}" alt="SQL"><h3>SQL</h3></div>
-      <div class="card" onclick="abrirModal('bq')"><img src="{{url_for('static','images/bigquery_icon_2.png')}}" alt="BigQuery"><h3>BigQuery</h3></div>
-      <div class="card" onclick="abrirModal('looker')"><img src="{{url_for('static','images/studio_logo.png')}}" alt="Looker"><h3>Looker Studio</h3></div>
+      <div class="card" onclick="abrirModal('py')"><img src="{{ url_for('static', filename='images/python_logo.png')}}" alt="Python"><h3>Python</h3></div>
+      <div class="card" onclick="abrirModal('apps')"><img src="{{ url_for('static', filename='images/app_scrip_logo_2.png')}}" alt="Apps"><h3>Apps Script</h3></div>
+      <div class="card" onclick="abrirModal('java')"><img src="{{ url_for('static', filename='images/java_logo.png')}}" alt="Java"><h3>Java</h3></div>
+      <div class="card" onclick="abrirModal('sql')"><img src="{{ url_for('static', filename='images/sql_logo.png')}}" alt="SQL"><h3>SQL</h3></div>
+      <div class="card" onclick="abrirModal('bq')"><img src="{{ url_for('static', filename='images/bigquery_icon_2.png')}}" alt="BigQuery"><h3>BigQuery</h3></div>
+      <div class="card" onclick="abrirModal('looker')"><img src="{{ url_for('static', filename='images/studio_logo.png')}}" alt="Looker"><h3>Looker Studio</h3></div>
     </div>
   </section>
 
   <!-- ======================= ÁREAS DE SERVICIO ======================= -->
-  <section>
+  <section style="max-width:70%;margin:0 auto;text-align:left;">
     <h2 style="text-align:center">Áreas de servicio</h2>
 
     <h3>1. Automatización con Python y Visibilidad de Datos</h3>
@@ -78,7 +78,7 @@
 <!-- ======================= FOOTER ======================= -->
 <footer>
   <div class="footer-contenido">
-    <img src="{{url_for('static','images/pylabs_logo.png')}}" alt="Logo PyAutomate Labs">
+    <img src="{{ url_for('static', filename='images/pylabs_logo.png')}}" alt="Logo PyAutomate Labs">
     <div class="footer-info">
       <p><strong>PyAutomate Labs</strong></p>
       <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
@@ -101,8 +101,8 @@
 <div class="modal" id="looker"><div class="modal-content"><span class="close" onclick="cerrarModal('looker')">×</span><h3>Looker Studio</h3><p>Dashboards en tiempo real e informes profesionales conectados a BigQuery / Sheets.</p></div></div>
 
 <script>
-  function abrirModal(id){document.getElementById(id).style.display="block";}
-  function cerrarModal(id){document.getElementById(id).style.display="none";}
+  function abrirModal(id){ document.getElementById(id).style.display="block"; }
+  function cerrarModal(id){ document.getElementById(id).style.display="none"; }
   window.onclick = function(e){
     document.querySelectorAll('.modal').forEach(function(m){
       if (e.target == m) { m.style.display="none"; }
@@ -111,9 +111,17 @@
 </script>
 
 <style>
-  .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:999;}
-  .modal-content{background:white;margin:10% auto;padding:2rem;border-radius:10px;max-width:600px;position:relative;}
-  .close{position:absolute;top:10px;right:15px;font-size:24px;color:#00d2ff;cursor:pointer;}
+  .modal{
+    display:none;
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background:rgba(0,0,0,0.7);z-index:999;
+  }
+  .modal-content{
+    background:#fff;margin:10% auto;padding:2rem;
+    border-radius:10px;max-width:600px;position:relative;
+  }
+  .close{position:absolute;top:10px;right:15px;font-size:24px;cursor:pointer;}
 </style>
 
 </body>
