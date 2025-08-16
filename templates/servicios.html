@@ -1,39 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios – PyAutomate Labs</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    *{box-sizing:border-box;}
-    body{
-      margin:0;
-      font-family:'Segoe UI',sans-serif;
-      background-color:#ffffff;
-      color:#333;
-      display:flex;
-      flex-direction:column;
-      min-height:100vh;
-    }
-    header{
-      background:linear-gradient(to right,#003973,#00d2ff);
-      padding:3rem 2rem 2rem;<!DOCTYPE html>
-<html lang="es">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servicios – PyAutomate Labs</title>
-  <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" href="static/images/favicon.ico">
+  <link rel="stylesheet" href="static/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
+
   <!-- === HEADER === -->
   <header>
     <div class="brand">
-      <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
+      <img src="static/images/pylabs_logo.png" alt="Logo PyAutomate Labs">
       <div>
         <h1>PyAutomate Labs</h1>
         <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
@@ -49,50 +30,51 @@
     <a href="/contacto">Contacto</a>
   </nav>
 
-  <!-- === MAIN CONTENT === -->
   <main>
 
+    <!-- === TECNOLOGÍAS === -->
     <section>
       <h2>Tecnologías Principales</h2>
-      <p style="text-align:center"><strong>Trabajamos con: </strong> Python, Java, Apps Script, Power Automate, SQL, BigQuery, Looker Studio y más.</p>
+      <p style="text-align:center"><strong>Trabajamos con:</strong> Python, Java, Apps Script, Power Automate, SQL, BigQuery, Looker Studio.</p>
 
       <div class="features">
-        <div class="card"><img src="{{ url_for('static', filename='images/python_logo.png') }}" alt="Python"><h3>Python</h3></div>
-        <div class="card"><img src="{{ url_for('static', filename='images/app_scrip_logo_2.png') }}" alt="Apps Script"><h3>Apps Script</h3></div>
-        <div class="card"><img src="{{ url_for('static', filename='images/java_logo.png') }}" alt="Java"><h3>Java</h3></div>
-        <div class="card"><img src="{{ url_for('static', filename='images/sql_logo.png') }}" alt="SQL"><h3>SQL</h3></div>
-        <div class="card"><img src="{{ url_for('static', filename='images/bigquery_icon_2.png') }}" alt="BigQuery"><h3>BigQuery</h3></div>
-        <div class="card"><img src="{{ url_for('static', filename='images/studio_logo.png') }}" alt="Looker"><h3>Looker Studio</h3></div>
+        <div class="card"><img src="static/images/python_logo.png" alt="Python"><h3>Python</h3></div>
+        <div class="card"><img src="static/images/app_scrip_logo_2.png" alt="Apps Script"><h3>Apps Script</h3></div>
+        <div class="card"><img src="static/images/java_logo.png" alt="Java"><h3>Java</h3></div>
+        <div class="card"><img src="static/images/sql_logo.png" alt="SQL"><h3>SQL</h3></div>
+        <div class="card"><img src="static/images/bigquery_icon_2.png" alt="BigQuery"><h3>BigQuery</h3></div>
+        <div class="card"><img src="static/images/studio_logo.png" alt="Looker"><h3>Looker Studio</h3></div>
       </div>
     </section>
 
+    <!-- === ÁREAS DE SERVICIO === -->
     <section>
       <h2>Áreas de Servicio</h2>
 
       <h3>1. Automatización con Python y Visibilidad de Datos</h3>
       <ul>
-        <li>ETLs desde Excel, Sheets, APIs, Oracle, BigQuery, etc.</li>
+        <li>Desarrollo de ETLs desde Excel, Sheets, APIs, Oracle, BigQuery.</li>
         <li>Aplicaciones internas (Tkinter, PyQt) o scripts automatizados.</li>
         <li>Dashboards dinámicos (Power BI, Looker Studio).</li>
         <li>Integraciones y RPA para tareas repetitivas.</li>
       </ul>
 
-      <h3>2. Automatización con herramientas Low Code / No Code</h3>
+      <h3>2. Automatización con plataformas Low Code / No Code</h3>
       <ul>
         <li>Google Apps Script, Power Automate, Zapier.</li>
-        <li>Digitalización de formas y flujos con Google Forms.</li>
-        <li>Conexión entre Sheets, Drive, Outlook, Forms, etc.</li>
+        <li>Digitalización de formularios y flujos con Google Forms.</li>
+        <li>Integración entre Sheets, Drive, Outlook, Forms, etc.</li>
       </ul>
 
-      <h3>3. Soluciones Personalizadas y Proyectos Especiales</h3>
+      <h3>3. Soluciones Personalizadas / Proyectos Especiales</h3>
       <ul>
-        <li>Desarrollo de scripts a medida.</li>
-        <li>Creación de herramientas ligeras (extractores, formularios).</li>
-        <li>Asistencia en proyectos de programación o visualización.</li>
-        <li>Automatización de simulaciones, cálculos o flujos repetitivos.</li>
+        <li>Scripts a medida para tareas específicas.</li>
+        <li>Creación de extractores, convertidores, reportes automatizados.</li>
+        <li>Visualización de datos para informes, KPIs o presentaciones.</li>
       </ul>
 
-      <p><strong>⭐ Agenda tu diagnóstico sin costo.</strong> Cuéntanos tus procesos y nosotros nos encargamos del resto.</p>
+      <p style="text-align:center"><strong>⭐ Agenda tu diagnóstico sin costo.</strong> Cuéntanos tus procesos y nosotros nos
+         encargamos del resto.</p>
     </section>
 
   </main>
@@ -100,7 +82,7 @@
   <!-- === FOOTER === -->
   <footer>
     <div class="footer-contenido">
-      <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
+      <img src="static/images/pylabs_logo.png" alt="Logo PyAutomate Labs">
       <div class="footer-info">
         <p><strong>PyAutomate Labs</strong></p>
         <p>⚙️ Automatiza. Optimiza. Escala. — Tu partner digital</p>
@@ -115,5 +97,3 @@
   <a href="https://wa.me/+56930875110" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
-
-
