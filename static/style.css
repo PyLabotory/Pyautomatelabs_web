@@ -244,7 +244,9 @@ footer {
 }
 .footer-info p {
   margin: 0.3rem 0;
+  line-height: 1.5;  /* <= esto es lo que faltaba */
 }
+
 .footer-copy {
   font-size: 0.85rem;
   color: #bbb;
@@ -279,6 +281,7 @@ footer {
   .como-funciona .pasos{flex-direction:column; align-items:center;}
   .card,.paso{width:100%;}
 }
+
 
 
 
