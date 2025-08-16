@@ -244,8 +244,10 @@ footer {
 }
 .footer-info p {
   margin: 0.3rem 0;
-  line-height: 1.5;  /* <= esto es lo que faltaba */
+  white-space: nowrap;      /* <--- evita el salto de línea */
+  line-height: 1.5;
 }
+
 
 .footer-copy {
   font-size: 0.85rem;
@@ -281,6 +283,7 @@ footer {
   .como-funciona .pasos{flex-direction:column; align-items:center;}
   .card,.paso{width:100%;}
 }
+
 
 
 
