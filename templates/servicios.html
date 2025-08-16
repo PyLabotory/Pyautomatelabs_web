@@ -10,8 +10,7 @@
 </head>
 
 <body>
-
-  <!-- HEADER -->
+  <!-- === HEADER === -->
   <header>
     <div class="brand">
       <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
@@ -22,7 +21,7 @@
     </div>
   </header>
 
-  <!-- NAV -->
+  <!-- === NAV === -->
   <nav>
     <a href="/">Inicio</a>
     <a href="/servicios">Servicios</a>
@@ -30,89 +29,60 @@
     <a href="/contacto">Contacto</a>
   </nav>
 
-  <!-- MAIN -->
+  <!-- === MAIN CONTENT === -->
   <main>
 
-    <!-- Tecnologías -->
+    <!-- TECNOLOGÍAS -->
     <section>
-      <h2 style="text-align:center;">Tecnologías Principales</h2>
-      <p style="text-align:center;"><strong>Trabajamos con: </strong> Python, Apps Script, SQL, Java, BigQuery, Looker Studio y otras plataformas.</p>
+      <h2 style="text-align:center">Tecnologías Principales</h2>
+      <p style="text-align:center"><strong>Trabajamos con: </strong> Python, Java, Apps Script, Power Automate, SQL, BigQuery, Looker Studio y más.</p>
 
       <div class="features">
-        <div onclick="abrirModal('pythonModal')" class="card"><img src="{{ url_for('static', 'images/python_logo.png') }}" alt="Python"><h3>Python</h3></div>
-        <div onclick="abrirModal('appModal')"   class="card"><img src="{{ url_for('static', 'images/app_scrip_logo_2.png') }}" alt="Apps Script"><h3>Apps Script</h3></div>
-        <div onclick="abrirModal('sqlModal')"   class="card"><img src="{{ url_for('static', 'images/sql_logo.png') }}" alt="SQL"><h3>SQL</h3></div>
-        <div onclick="abrirModal('bqModal')"    class="card"><img src="{{ url_for('static', 'images/bigquery_icon_2.png') }}" alt="BigQuery"><h3>BigQuery</h3></div>
-        <div onclick="abrirModal('lookerModal')"class="card"><img src="{{ url_for('static', 'images/studio_logo.png') }}" alt="Looker"><h3>Looker Studio</h3></div>
+        <div class="card" onclick="abrirModal('pythonModal')">
+          <img src="{{ url_for('static', filename='images/python_logo.png') }}" alt="Python">
+          <h3>Python</h3>
+        </div>
+        <div class="card" onclick="abrirModal('appsModal')">
+          <img src="{{ url_for('static', filename='images/app_scrip_logo_2.png') }}" alt="Apps Script">
+          <h3>Apps Script</h3>
+        </div>
+        <div class="card" onclick="abrirModal('javaModal')">
+          <img src="{{ url_for('static', filename='images/java_logo.png') }}" alt="Java">
+          <h3>Java</h3>
+        </div>
+        <div class="card" onclick="abrirModal('sqlModal')">
+          <img src="{{ url_for('static', filename='images/sql_logo.png') }}" alt="SQL">
+          <h3>SQL</h3>
+        </div>
+        <div class="card" onclick="abrirModal('bqModal')">
+          <img src="{{ url_for('static', filename='images/bigquery_icon_2.png') }}" alt="BigQuery">
+          <h3>BigQuery</h3>
+        </div>
+        <div class="card" onclick="abrirModal('lookerModal')">
+          <img src="{{ url_for('static', filename='images/studio_logo.png') }}" alt="Looker">
+          <h3>Looker Studio</h3>
+        </div>
       </div>
     </section>
 
-    <!-- MODALES DE TECNOLOGÍA -->
-    <div class="modal" id="pythonModal">
-      <div class="modal-content"><span class="close" onclick="cerrarModal('pythonModal')">&times;</span>
-        <h3>Python</h3>
-        <p>Lenguaje de programación versátil para automatización, ETL, desarrollo de aplicaciones, bots y dashboards automáticos.</p>
-      </div>
-    </div>
-
-    <div class="modal" id="appModal">
-      <div class="modal-content"><span class="close" onclick="cerrarModal('appModal')">&times;</span>
-        <h3>Google Apps Script</h3>
-        <p>Automatiza procesos dentro del ecosistema Google: Sheets, Gmail, Drive y Forms.</p>
-      </div>
-    </div>
-
-    <div class="modal" id="sqlModal">
-      <div class="modal-content"><span class="close" onclick="cerrarModal('sqlModal')">&times;</span>
-        <h3>SQL</h3>
-        <p>Consultas complejas, transformación y carga de datos desde bases relacionales a plataformas de BI.</p>
-      </div>
-    </div>
-
-    <div class="modal" id="bqModal">
-      <div class="modal-content"><span class="close" onclick="cerrarModal('bqModal')">&times;</span>
-        <h3>BigQuery</h3>
-        <p>Plataforma cloud de Google para manejo y análisis de grandes volúmenes de datos.</p>
-      </div>
-    </div>
-
-    <div class="modal" id="lookerModal">
-      <div class="modal-content"><span class="close" onclick="cerrarModal('lookerModal')">&times;</span>
-        <h3>Looker Studio</h3>
-        <p>Herramienta de visualización que permite crear dashboards dinámicos, profesionales y automatizados.</p>
-      </div>
-    </div>
-
-    <!-- Áreas de servicio (tarjetas) -->
+    <!-- ÁREAS DE SERVICIO -->
     <section>
-      <h2 style="text-align:center;">Áreas de Servicio</h2>
-      <div class="features">
+      <h2 style="text-align:center">Áreas de Servicio</h2>
 
-        <div class="card">
-          <i class="fab fa-python" style="font-size:2rem;"></i>
-          <h3>Automatización con Python</h3>
-          <p>ETLs desde Excel, Sheets o APIs, construcción de bots, aplicaciones internas y dashboards automáticos con Power BI / Looker.</p>
-        </div>
+      <h3>1. Automatización con Python y Visibilidad de Datos</h3>
+      <p style="text-align:center">Diseñamos procesos automatizados a medida conectando tus fuentes de datos (Excel, APIs, SQL, BigQuery, Oracle, etc.), desarrollamos scripts y aplicaciones internas en Python, y construimos dashboards impactantes en Looker Studio o Power BI para que tu información esté siempre disponible y lista para decidir.</p>
 
-        <div class="card">
-          <i class="fas fa-plug" style="font-size:2rem;"></i>
-          <h3>Low Code / No Code</h3>
-          <p>Automatizaciones con Apps Script, PowerAutomate o Zapier. Notificaciones automáticas, formularios inteligentes y conexión entre plataformas.</p>
-        </div>
+      <h3>2. Automatización con herramientas Low Code / No Code</h3>
+      <p style="text-align:center">Usamos Google Apps Script, Power Automate y otras plataformas para digitalizar flujos con rapidez. Automatizamos notificaciones, formularios, integraciones entre Sheets, Drive, Outlook, Forms y creamos soluciones flexibles sin necesidad de código extensivo.</p>
 
-        <div class="card">
-          <i class="fas fa-tools" style="font-size:2rem;"></i>
-          <h3>Soluciones Personalizadas</h3>
-          <p>Desarrollo de scripts a medida: extractores, convertidores, flujos de cálculo, herramientas internas o simulaciones técnicas.</p>
-        </div>
+      <h3>3. Soluciones Personalizadas y Proyectos Especiales</h3>
+      <p style="text-align:center">Desarrollamos scripts específicos para tu operación, generadores de informes automáticos, simuladores, extractores de datos o herramientas ligeras que permiten ahorrar horas de trabajo. También ofrecemos apoyo en proyectos académicos y de visualización.</p>
 
-      </div>
-      <p style="text-align:center;"><strong>⭐ Agenda tu diagnóstico sin costo.</strong><br>Te ayudamos a transformar tus procesos con soluciones simples y efectivas.</p>
+      <p style="text-align:center"><strong>⭐ Agenda tu diagnóstico sin costo.</strong> Cuéntanos tus procesos y nosotros nos encargamos del resto.</p>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
+  <!-- === FOOTER === -->
   <footer>
     <div class="footer-contenido">
       <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
@@ -124,21 +94,80 @@
         <p><i class="fas fa-globe"></i> www.pyautomatelabs.cl</p>
       </div>
     </div>
-    <div class="footer-copy">© 2025 PyAutomate Labs — Todos los derechos reservados.</div>
+    <div class="footer-copy">© 2025 PyAutomate Labs — Dominio reservado. Todos los derechos reservados.</div>
   </footer>
 
   <a href="https://wa.me/+56930875110" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 
-  <!-- JS MODALES -->
+  <!-- === MODALES === -->
+  <div class="modal" id="pythonModal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('pythonModal')">&times;</span>
+      <h3>Python</h3>
+      <p>Lenguaje de programación versátil para crear aplicaciones, automatizar tareas, construir dashboards y procesar grandes volúmenes de datos con rapidez.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="appsModal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('appsModal')">&times;</span>
+      <h3>Google Apps Script</h3>
+      <p>Scripting basado en JavaScript para automatizar tareas dentro del ecosistema Google (Sheets, Gmail, Forms). Ideal para flujos rápidos y bajo código.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="javaModal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('javaModal')">&times;</span>
+      <h3>Java</h3>
+      <p>Lenguaje robusto y multiplataforma utilizado para aplicaciones empresariales, móviles (Android) e integraciones complejas.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="sqlModal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('sqlModal')">&times;</span>
+      <h3>SQL</h3>
+      <p>Lenguaje para extraer, transformar y analizar datos en bases relacionales. Ideal para reportes, dashboards e integración con herramientas BI.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="bqModal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('bqModal')">&times;</span>
+      <h3>BigQuery</h3>
+      <p>Plataforma de análisis de datos en la nube de Google, optimizada para manejar millones de filas y crear ETLs escalables.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="lookerModal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('lookerModal')">&times;</span>
+      <h3>Looker Studio</h3>
+      <p>Herramienta de visualización que permite construir reportes interactivos con conexión directa a BigQuery, Sheets y APIs.</p>
+    </div>
+  </div>
+
+  <!-- === SCRIPT PARA MODALES === -->
   <script>
-    function abrirModal(id){ document.getElementById(id).style.display="block"; }
-    function cerrarModal(id){ document.getElementById(id).style.display="none"; }
-    window.onclick = function(event){
-      document.querySelectorAll(".modal").forEach(modal => {
-        if(event.target==modal){ modal.style.display="none"; }
+    function abrirModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function cerrarModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modales = document.querySelectorAll(".modal");
+      modales.forEach(modal => {
+        if (event.target == modal) modal.style.display = "none";
       });
     }
   </script>
 
 </body>
 </html>
+
+
+</body>
+</html>
+
