@@ -1,183 +1,155 @@
-/* =========================
-   style.css centralizado
-   ========================= */
+/* =======================================
+   ESTILO CENTRALIZADO - PyAutomate Labs
+   Minimalista, profesional y tecnológico
+========================================== */
 
 /* Reset & base */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html, body {
   height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7fa;
+  color: #333;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f0f2f5, #e6ecf3);
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-main, section {
+main, section, .content {
   flex: 1;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Header */
+/* ==============================
+            HEADER
+============================== */
 header {
-  background: linear-gradient(to right,#003973,#00d2ff);
-  padding: 3rem 2rem 2rem;
+  background: linear-gradient(to right, #002f4b, #00d2ff);
+  padding: 2rem 1rem;
   text-align: center;
   color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .brand {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1.2rem;
   flex-wrap: wrap;
-  gap: 1.5rem;
 }
-.brand img {height: 70px; border-radius: 10px;}
-.brand h1 {font-size: 3rem; margin: 0;}
-.brand p {margin: 0.3rem 0 0; font-size: 1.2rem; color: #c6ebff;}
+.brand img {height: 60px; border-radius: 8px;}
+.brand h1 {font-size: 2.5rem;}
+.brand p {font-size: 1.1rem; color: #c6ebff;}
 
-/* Nav */
+/* ==============================
+            NAV
+============================== */
 nav {
   display: flex;
   justify-content: center;
-  background-color: #f2f2f2;
-  padding: 1rem 0;
   flex-wrap: wrap;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 nav a {
-  color: #333;
+  color: #002f4b;
   text-decoration: none;
-  margin: 0 1.8rem;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 nav a:hover {color: #00d2ff;}
 
-/* Secciones principales */
-section.empresa, section.mision {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: #fff;
-}
-section.empresa h2, section.mision h2 {
-  font-size: 2.6rem;
-  color: #00d2ff;
-  margin-bottom: 1rem;
-}
-section.empresa p, section.mision p {
-  max-width: 850px;
-  margin: 0 auto;
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #555;
+/* ==============================
+        SECCIONES GENERALES
+============================== */
+section {
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 
 /* Hero */
 .hero {
-  background-color: #f8f9fb;
-  padding: 4rem 2rem;
   text-align: center;
+  padding: 4rem 2rem;
 }
-.hero h2 {font-size: 2.5rem; color: #00d2ff; margin-bottom: 1rem;}
-.hero p {font-size: 1.2rem; max-width: 800px; margin: 0 auto; line-height: 1.8; color: #555;}
-.buttons {margin-top: 2rem;}
+.hero h2 {font-size: 2.4rem; color: #00d2ff;}
+.hero p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 1rem auto 0;
+  line-height: 1.8;
+  color: #555;
+}
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 .buttons a {
   background-color: #00d2ff;
   color: white;
   padding: 0.9rem 2rem;
   border-radius: 10px;
-  text-decoration: none;
   font-weight: bold;
-  margin: 0 1rem;
+  text-decoration: none;
   font-size: 1rem;
-  box-shadow: 0 4px 15px rgba(0,210,255,0.3);
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 .buttons a:hover {background-color: #0090cc;}
 
-/* Features (cards en index) */
+/* ==============================
+            CARDS
+============================== */
 .features {
-  padding: 4rem 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
   justify-content: center;
-  background-color: #ffffff;
-}
-.card {
-  background-color: #ffffff;
-  padding: 2rem 1rem;
-  border-radius: 14px;
-  width: 260px;
-  text-align: center;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {transform: translateY(-6px); box-shadow: 0 6px 20px rgba(0,0,0,0.08);}
-.card i {
-  font-size: 2.2rem;
-  color: white;
-  background-color: #00d2ff;
-  padding: 15px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-.card h3 {color: #00d2ff; margin-bottom: 0.7rem; font-size: 1.2rem;}
-.card p {font-size: 1rem; color: #555; line-height: 1.6;}
-
-/* Cómo funciona */
-.como-funciona {
-  padding: 4rem 2rem;
-  background-color: #f8f9fb;
-  text-align: center;
-}
-.como-funciona h2 {
-  font-size: 2.4rem;
-  color: #00d2ff;
-  margin-bottom: 2rem;
-}
-.proceso {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
   gap: 2rem;
 }
-.paso {
-  flex: 1 1 200px;
-  max-width: 220px;
-  background-color: white;
-  border-radius: 14px;
-  padding: 1.5rem;
+.card {
+  background: white;
+  padding: 2rem 1.2rem;
+  border-radius: 12px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
 }
-.paso i {
-  font-size: 2rem;
-  color: white;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+.card i {
+  font-size: 2.2rem;
   background-color: #00d2ff;
-  padding: 12px;
+  color: white;
+  padding: 14px;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
-.paso h3 {font-size: 1.2rem; color: #00d2ff; margin-bottom: 0.5rem;}
-.paso p {font-size: 0.95rem; color: #555; line-height: 1.5;}
+.card h3 {color: #00d2ff; font-size: 1.3rem;}
+.card p {color: #555; font-size: 1rem; line-height: 1.6;}
 
-/* Proyectos (tarjetas) */
-.descripcion-proyectos {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.7;
-  font-size: 1.05rem;
-  color: #555;
-}
+/* ==============================
+           PROYECTOS
+============================== */
 .tarjetas {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
@@ -185,18 +157,21 @@ section.empresa p, section.mision p {
   margin-top: 2rem;
 }
 .tarjeta {
-  border: 1px solid #e0e0e0;
+  background: #fff;
   padding: 1.5rem;
   border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  border: 1px solid #e0e0e0;
 }
-.tarjeta:hover {transform: translateY(-5px); box-shadow: 0 8px 18px rgba(0,0,0,.15);}
-.tarjeta h3 {color:#00d2ff; margin-top:0;}
-.cta-row {margin-top:1rem;}
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+.tarjeta h3 {color: #00d2ff;}
 .cta-row a {
   display:inline-block;
+  margin-top: 1rem;
   padding:10px 14px;
   background:#00d2ff;
   color:white;
@@ -207,42 +182,9 @@ section.empresa p, section.mision p {
 }
 .cta-row a:hover {background:#0090cc;}
 
-/* Servicios (galería + modals) */
-.tecnologia-galeria {
-  display:flex;
-  flex-wrap:wrap;
-  gap:1.5rem;
-  justify-content:center;
-}
-.tecnologia-item {
-  background-color:#fff;
-  border-radius:10px;
-  padding:1rem;
-  width:180px;
-  text-align:center;
-  border:1px solid #e0e0e0;
-  box-shadow:0 2px 8px rgba(0,0,0,0.05);
-  cursor:pointer;
-  transition:transform 0.3s, box-shadow 0.3s;
-}
-.tecnologia-item:hover {transform:translateY(-6px); box-shadow:0 6px 20px rgba(0,0,0,0.08);}
-.tecnologia-item img {max-width:100%; max-height:80px; object-fit:contain;}
-
-.modal {display:none; position:fixed; z-index:999; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7);}
-.modal-content {
-  background-color:#fff;
-  margin:10% auto;
-  padding:2rem;
-  border:1px solid #00d2ff;
-  width:90%;
-  max-width:600px;
-  border-radius:10px;
-  color:#333;
-  position:relative;
-}
-.close {position:absolute; top:10px; right:20px; color:#00d2ff; font-size:24px; cursor:pointer;}
-
-/* Contacto */
+/* ==============================
+            CONTACTO
+============================== */
 form {
   display:flex;
   flex-direction:column;
@@ -252,7 +194,7 @@ form {
   border-radius:10px;
   border:1px solid #e0e0e0;
 }
-label {font-weight:bold; font-size:1rem;}
+label {font-weight:600;}
 input, textarea {
   padding:0.8rem;
   border-radius:5px;
@@ -274,28 +216,44 @@ button {
 }
 button:hover {background-color:#0090cc;}
 
-/* Footer profesional */
+/* ==============================
+             FOOTER
+============================== */
 footer {
-  background-color:#0a1a2f;
-  padding:2rem 1rem;
-  text-align:center;
-  font-size:0.9rem;
-  color:#555;
+  background-color: #0a1a2f;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
 }
 .footer-contenido {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:center;
-  gap:1.5rem;
-  margin-bottom:1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
 }
-.footer-contenido img {height:60px; border-radius:8px;}
-.footer-info {text-align:left;}
-.footer-info p {margin:0.3rem 0;}
-.footer-copy {margin-top:1rem; font-size:0.85rem; color:#888;}
+.footer-contenido img {
+  height: 60px;
+  border-radius: 8px;
+}
+.footer-info {
+  text-align: left;
+  max-width: 300px;
+}
+.footer-info p {
+  margin: 0.3rem 0;
+}
+.footer-copy {
+  font-size: 0.85rem;
+  color: #bbb;
+}
 
-/* WhatsApp */
+/* ==============================
+            WHATSAPP
+============================== */
 .whatsapp-float {
   position:fixed;
   bottom:25px;
@@ -309,70 +267,33 @@ footer {
   box-shadow:0 4px 10px rgba(0,0,0,0.4);
   transition:background-color .3s, transform .2s;
 }
-.whatsapp-float:hover {background-color:#1ebe5d; transform:scale(1.05);}
+.whatsapp-float:hover {
+  background-color:#1ebe5d;
+  transform:scale(1.05);
+}
 
-/* Animaciones */
+/* ==============================
+         RESPONSIVE MOBILE
+============================== */
+@media (max-width: 768px) {
+  header {padding: 1rem;}
+  .brand h1 {font-size: 1.8rem;}
+  .brand p {font-size: 1rem;}
+  nav {flex-direction: column;}
+  .tarjetas {grid-template-columns: 1fr;}
+  .card, .tarjeta, .paso {width: 100%;}
+  form {padding: 1rem;}
+  .modal-content {width: 95%; margin: 20% auto;}
+}
+
+/* ==============================
+         ANIMACIONES
+============================== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px);}
-  to { opacity: 1; transform: translateY(0);}
+  to   { opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive */
-/* Responsive */
-@media (max-width: 768px) {
-  header {padding: 1rem; font-size: 1.2rem;}
-  nav {flex-direction: column; align-items: center; gap: 1rem;}
-  nav a {font-size: 1rem;}
-  section {margin: 1rem; padding: 1rem;}
-  ul li {flex-direction: column; align-items: flex-start;}
-
-  /* 👇 lo nuevo que te pasé */
-  header h1 {font-size: 1.8rem;}
-  header p {font-size: 1rem;}
-
-  h2 {font-size: 1.6rem;}
-  h3 {font-size: 1.2rem;}
-  p  {font-size: 0.95rem;}
-
-  .tarjetas {
-    grid-template-columns: 1fr; /* Tarjetas en una sola columna */
-  }
-
-  .card, .paso {
-    width: 100%; /* Para que las cards y pasos ocupen todo el ancho */
-    max-width: none;
-  }
-
-  .modal-content {
-    width: 95%; /* Modales más ajustados */
-    margin: 20% auto;
-  }
-
-  form {
-    padding: 1rem;
-    gap: 1rem;
-  }
-}
-
-/* Fix responsive móvil */
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
-main, section, .content {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.tarjeta, .modal-content, .tecnologia-item {
-  max-width: 100%;
-}
-
-html, body {
-  overflow-x: hidden; /* Evita scroll lateral molesto */
-}
 
 
 
