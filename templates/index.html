@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio – PyAutomate Labs</title>
   <meta name="description" content="PyAutomate Labs — Automatización inteligente, dashboards, integración de datos y soluciones tecnológicas para PYMEs.">
-  <meta name="author" content="PyAutomate Labs">
   <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+  <!-- ============================ HEADER ============================ -->
   <header>
     <div class="brand">
       <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
@@ -22,6 +22,7 @@
     </div>
   </header>
 
+  <!-- ============================ NAV ============================ -->
   <nav>
     <a href="/">Inicio</a>
     <a href="/servicios">Servicios</a>
@@ -29,43 +30,62 @@
     <a href="/contacto">Contacto</a>
   </nav>
 
+  <!-- ============================ CONTENT ============================ -->
   <main>
 
+    <!-- ¿Quienes somos? -->
     <section class="empresa">
       <h2>¿Quiénes Somos?</h2>
-      <p><strong>PyAutomate Labs</strong> es una empresa tecnológica especializada en automatización de procesos, integración de datos y desarrollo de soluciones digitales a medida. Conjugamos tecnología, metodología y visión estratégica para aportar valor real a la operación de nuestros clientes.</p>
+      <p><strong>PyAutomate Labs</strong> es una empresa tecnológica especializada en automatización de procesos,
+         integración de datos y desarrollo de soluciones digitales a medida. Conjugamos tecnología, metodología y
+         visión estratégica para aportar valor real a la operación de nuestros clientes.</p>
     </section>
 
+    <!-- Misión -->
     <section class="mision">
       <h2>Nuestra Misión</h2>
-      <p>Democratizar el acceso a la automatización y la inteligencia operativa, acercando soluciones ágiles y escalables tanto a PYMEs como a equipos corporativos que necesiten modernizar su flujo operativo. Nuestro compromiso es transformar procesos manuales en oportunidades de crecimiento sostenido, impulsando la eficiencia y la toma de decisiones informada mediante tecnología y buenas prácticas. Buscamos fomentar una cultura de innovación continua y brindar herramientas que permitan a las organizaciones optimizar sus recursos, mejorar su productividad y lograr una verdadera ventaja competitiva a largo plazo.</p>
+      <p>Democratizar el acceso a la automatización y la inteligencia operativa, acercando soluciones ágiles y
+         escalables tanto a PYMEs como a equipos corporativos que necesiten modernizar su flujo operativo. Nuestro
+         compromiso es transformar procesos manuales en oportunidades de crecimiento sostenido, impulsando la
+         eficiencia y la toma de decisiones informada mediante tecnología y buenas prácticas. Buscamos fomentar una
+         cultura de innovación continua y brindar herramientas que permitan a las organizaciones optimizar sus
+         recursos, mejorar su productividad y lograr una verdadera ventaja competitiva a largo plazo.</p>
     </section>
 
+    <!-- Visión -->
     <section class="vision">
       <h2>Nuestra Visión</h2>
-      <p>Ser el aliado tecnológico líder en Latinoamérica reconocido por acelerar la transformación digital de las empresas, convirtiendo procesos complejos en soluciones inteligentes que impacten positivamente la sostenibilidad, competitividad y profesionalización de nuestros clientes. Aspiramos a crear un ecosistema de innovación que permita escalar soluciones accesibles, modulares y de alto impacto para cualquier organización que busque evolucionar.</p>
+      <p>Ser el aliado tecnológico líder en Latinoamérica reconocido por acelerar la transformación digital de las
+         empresas, convirtiendo procesos complejos en soluciones inteligentes que impacten positivamente la
+         sostenibilidad, competitividad y profesionalización de nuestros clientes. Aspiramos a crear un ecosistema de
+         innovación que permita escalar soluciones accesibles, modulares y de alto impacto para cualquier organización
+         que busque evolucionar.</p>
     </section>
 
+    <!-- Hero -->
     <section class="hero">
       <h2>Transformamos procesos en oportunidades</h2>
-      <p>Somos especialistas en automatización inteligente y soluciones de integración empresarial. Reducimos tareas manuales,
-        conectamos sistemas y generamos visibilidad en tiempo real para decisiones más ágiles.</p>
+      <p>Somos especialistas en automatización inteligente y soluciones de integración empresarial. Reducimos tareas
+         manuales, conectamos sistemas y generamos visibilidad en tiempo real para decisiones más ágiles.</p>
       <div class="buttons">
         <a href="/servicios"><i class="fas fa-cogs"></i> Ver Servicios</a>
         <a href="/contacto"><i class="fas fa-paper-plane"></i> Cotizar Ahora</a>
       </div>
     </section>
 
-    <!-- CARDS PRINCIPALES -->
-    <section class="features">
-      <div class="card"><i class="fas fa-robot"></i><h3>Automatización Inteligente</h3><p>Eliminamos tareas repetitivas con bots.</p></div>
-      <div class="card"><i class="fas fa-database"></i><h3>Procesamiento de Datos</h3><p>Estructuramos tus fuentes de datos.</p></div>
-      <div class="card"><i class="fas fa-chart-line"></i><h3>Visualización</h3><p>Dashboards claros y de impacto.</p></div>
-      <div class="card"><i class="fas fa-handshake"></i><h3>Enfoque Consultivo</h3><p>Nos alineamos a tus objetivos.</p></div>
+    <!-- Cards principales -->
+    <section>
+      <h2>¿Qué Hacemos?</h2>
+      <div class="features">
+        <div class="card"><i class="fas fa-robot"></i><h3>Automatización Inteligente</h3><p>Eliminamos tareas repetitivas con bots.</p></div>
+        <div class="card"><i class="fas fa-database"></i><h3>Procesamiento de Datos</h3><p>Estructuramos tus fuentes de datos.</p></div>
+        <div class="card"><i class="fas fa-chart-line"></i><h3>Visualización</h3><p>Dashboards claros y de impacto.</p></div>
+        <div class="card"><i class="fas fa-handshake"></i><h3>Enfoque Consultivo</h3><p>Nos alineamos a tus objetivos.</p></div>
+      </div>
     </section>
 
-    <!-- COMO FUNCIONA (tarjetas iguales) -->
-    <section class="como-funciona-section">
+    <!-- Cómo funciona -->
+    <section>
       <h2>¿Cómo Funciona?</h2>
       <div class="features">
         <div class="card"><i class="fas fa-search"></i><h3>Paso 1: Diagnóstico</h3><p>Analizamos procesos y oportunidades de mejora.</p></div>
@@ -75,9 +95,9 @@
       </div>
     </section>
 
-
   </main>
 
+  <!-- ============================ FOOTER ============================ -->
   <footer>
     <div class="footer-contenido">
       <img src="{{ url_for('static', filename='images/pylabs_logo.png') }}" alt="Logo PyAutomate Labs">
@@ -89,14 +109,14 @@
         <p><i class="fas fa-globe"></i> www.pyautomatelabs.cl</p>
       </div>
     </div>
-    <div class="footer-copy">
-      © 2025 PyAutomate Labs — Dominio reservado. Todos los derechos reservados.
-    </div>
+    <div class="footer-copy">© 2025 PyAutomate Labs — Dominio reservado. Todos los derechos reservados.</div>
   </footer>
 
+  <!-- WhatsApp -->
   <a href="https://wa.me/+56930875110" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
+
 
 
 
