@@ -294,16 +294,41 @@ footer {
   to   { opacity: 1; transform: translateY(0);}
 }
 
-/* Íconos en sección ¿Cómo Funciona? */
+/* ==============================
+   Íconos y pasos tipo tarjeta
+============================== */
+.pasos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.paso {
+  background: white;
+  padding: 2rem 1.2rem;
+  border-radius: 12px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #e0e0e0;
+  transition: 0.3s ease;
+}
+.paso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
 .paso i {
   font-size: 2.2rem;
-  color: white;
   background-color: #00d2ff;
+  color: white;
   padding: 15px;
   border-radius: 50%;
-  display: inline-block;
   margin-bottom: 1rem;
 }
+.paso h3 {color: #00d2ff; font-size: 1.3rem;}
+.paso p {color: #555; font-size: 1rem; line-height: 1.6;}
+
 
 
 
