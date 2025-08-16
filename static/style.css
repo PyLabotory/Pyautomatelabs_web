@@ -294,6 +294,19 @@ footer {
   to   { opacity: 1; transform: translateY(0);}
 }
 
+/* Íconos en sección ¿Cómo Funciona? */
+.paso i {
+  font-size: 2.2rem;
+  color: white;
+  background-color: #00d2ff;
+  padding: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+
+
 
 
 
